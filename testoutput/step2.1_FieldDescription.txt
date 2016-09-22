@@ -1,0 +1,1810 @@
+======================================
+buyerCompany
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='name';
+	type='string';
+	value='Aaxis - ';
+}
+
+fieldesc{
+	name='price_list';
+	type='string';
+	value='price9900';
+}
+
+fieldesc{
+	name='rating';
+	type='int';
+	value='10|200';
+}
+
+fieldesc{
+	name='logo';
+	type='string_image';
+	value='simple.jpg';
+}
+
+fieldesc{
+	name='owner';
+	type='string_email';
+	value='philip@aaxischina.com';
+}
+
+fieldesc{
+	name='founded';
+	type='date';
+	value='past()';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+CostCenterList: referenced by cost_center.costCenterList
+CreditAccountList: referenced by credit_account.creditAccountList
+BillingAddressList: referenced by billing_address.billingAddressList
+EmployeeList: referenced by employee.employeeList
+OrderList: referenced by order.orderList
+======================================
+sellerCompany
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='name';
+	type='string';
+	value='Snack Co. ';
+}
+
+fieldesc{
+	name='owner';
+	type='string_email';
+	value='philip@aaxischina.com';
+}
+
+fieldesc{
+	name='logo';
+	type='string_image';
+	value='simple.jpg';
+}
+
+fieldesc{
+	name='contract_text';
+	type='string_document';
+	value='x.doc';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+ProfitCenterList: referenced by profit_center.profitCenterList
+CreditAccountList: referenced by credit_account.creditAccountList
+OrderList: referenced by order.orderList
+CustSvcRepList: referenced by cust_svc_rep.custSvcRepList
+======================================
+costCenter
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='name';
+	type='string';
+	value='Cost Center - HR';
+}
+
+fieldesc{
+	name='belongs_to';
+	type='buyer_company';
+	value='$(object)';
+}
+
+fieldesc{
+	name='password';
+	type='string_password';
+	value='*********';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+OrderList: referenced by order.orderList
+======================================
+profitCenter
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='name';
+	type='string';
+	value='Cost Center - HR';
+}
+
+fieldesc{
+	name='belongs_to';
+	type='seller_company';
+	value='$(object)';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+OrderList: referenced by order.orderList
+======================================
+creditAccount
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='name';
+	type='string';
+	value='Main Account Payable - ';
+}
+
+fieldesc{
+	name='buyer';
+	type='buyer_company';
+	value='$(object)';
+}
+
+fieldesc{
+	name='seller';
+	type='seller_company';
+	value='$(object)';
+}
+
+fieldesc{
+	name='authorized';
+	type='double';
+	value='100000.99';
+}
+
+fieldesc{
+	name='remain';
+	type='double';
+	value='100000.99';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+shippingAddress
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='line1';
+	type='string';
+	value='1900 AVE OF THE STARTS - ';
+}
+
+fieldesc{
+	name='line2';
+	type='string';
+	value='Suite 555 - ';
+}
+
+fieldesc{
+	name='city';
+	type='string';
+	value='Century City - ';
+}
+
+fieldesc{
+	name='state';
+	type='string';
+	value='CA|VA|MA|PA|WA|LA';
+}
+
+fieldesc{
+	name='country';
+	type='string_country_code';
+	value='US';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+ShippingGroupList: referenced by shipping_group.shippingGroupList
+======================================
+billingAddress
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='company';
+	type='buyer_company';
+	value='$(object)';
+}
+
+fieldesc{
+	name='line1';
+	type='string';
+	value='1900 AVE OF THE STARTS - ';
+}
+
+fieldesc{
+	name='line2';
+	type='string';
+	value='Suite 555 - ';
+}
+
+fieldesc{
+	name='city';
+	type='string';
+	value='Century City - ';
+}
+
+fieldesc{
+	name='state';
+	type='string';
+	value='CA|VA|MA|PA|WA|LA';
+}
+
+fieldesc{
+	name='country';
+	type='string_country_code';
+	value='US';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+PaymentGroupList: referenced by payment_group.paymentGroupList
+======================================
+employee
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='name';
+	type='string';
+	value='Philip';
+}
+
+fieldesc{
+	name='company';
+	type='buyer_company';
+	value='$(object)';
+}
+
+fieldesc{
+	name='email';
+	type='string_email';
+	value='philip@aaxischina.com';
+}
+
+fieldesc{
+	name='passwd';
+	type='string_password';
+	value='*******';
+}
+
+fieldesc{
+	name='cell_phone';
+	type='string_cn_phone';
+	value='13878786655';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+AssignmentList: referenced by assignment.assignmentList
+======================================
+role
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='role_name';
+	type='string';
+	value='manager';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+AccessList: referenced by access.accessList
+CustSvcRepList: referenced by cust_svc_rep.custSvcRepList
+======================================
+assignment
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='user';
+	type='employee';
+	value='$(object)';
+}
+
+fieldesc{
+	name='access';
+	type='access';
+	value='$(object)';
+}
+
+fieldesc{
+	name='assigned_date';
+	type='date';
+	value='2019-1-1';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+access
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='role_name';
+	type='string';
+	value='x manager';
+}
+
+fieldesc{
+	name='role';
+	type='role';
+	value='$(object)';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+AssignmentList: referenced by assignment.assignmentList
+======================================
+order
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='buyer';
+	type='buyer_company';
+	value='$(object)';
+}
+
+fieldesc{
+	name='seller';
+	type='seller_company';
+	value='$(object)';
+}
+
+fieldesc{
+	name='title';
+	type='string';
+	value='House Buiding - ';
+}
+
+fieldesc{
+	name='cost_center';
+	type='cost_center';
+	value='$(object)';
+}
+
+fieldesc{
+	name='profit_center';
+	type='profit_center';
+	value='$(object)';
+}
+
+fieldesc{
+	name='total_amount';
+	type='money';
+	value='$3000000000.88';
+}
+
+fieldesc{
+	name='type';
+	type='string';
+	value='ORDER|QUOTE|INVOICE';
+}
+
+fieldesc{
+	name='mark_as_delete';
+	type='bool';
+	value='true';
+}
+
+fieldesc{
+	name='confirmation';
+	type='confirmation';
+	value='$(object)';
+}
+
+fieldesc{
+	name='approval';
+	type='approval';
+	value='$(object)';
+}
+
+fieldesc{
+	name='processing';
+	type='processing';
+	value='$(object)';
+}
+
+fieldesc{
+	name='shipment';
+	type='shipment';
+	value='$(object)';
+}
+
+fieldesc{
+	name='delivery';
+	type='delivery';
+	value='$(object)';
+}
+
+fieldesc{
+	name='recurring_info';
+	type='recurring_info';
+	value='$(object)';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+LineItemList: referenced by line_item.lineItemList
+ShippingGroupList: referenced by shipping_group.shippingGroupList
+PaymentGroupList: referenced by payment_group.paymentGroupList
+ActionList: referenced by action.actionList
+======================================
+recurringInfo
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='name';
+	type='string';
+	value='Order Recurring - ';
+}
+
+fieldesc{
+	name='next_time';
+	type='date';
+	value='2018-07-09';
+}
+
+fieldesc{
+	name='cron_expr';
+	type='string';
+	value='*****08';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+OrderList: referenced by order.orderList
+======================================
+confirmation
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='who';
+	type='string';
+	value='approver';
+}
+
+fieldesc{
+	name='confirm_time';
+	type='date';
+	value='2018-07-09';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+OrderList: referenced by order.orderList
+======================================
+shipment
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='who';
+	type='string';
+	value='carrier';
+}
+
+fieldesc{
+	name='ship_time';
+	type='date';
+	value='2018-07-09';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+OrderList: referenced by order.orderList
+======================================
+delivery
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='who';
+	type='string';
+	value='deliverer';
+}
+
+fieldesc{
+	name='delivery_time';
+	type='date';
+	value='2018-07-09';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+OrderList: referenced by order.orderList
+======================================
+processing
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='who';
+	type='string';
+	value='processor';
+}
+
+fieldesc{
+	name='process_time';
+	type='date';
+	value='2018-07-09';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+OrderList: referenced by order.orderList
+======================================
+approval
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='who';
+	type='string';
+	value='approver';
+}
+
+fieldesc{
+	name='approve_time';
+	type='date';
+	value='2018-07-09';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+OrderList: referenced by order.orderList
+======================================
+lineItem
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='biz_order';
+	type='order';
+	value='$(object)';
+}
+
+fieldesc{
+	name='sku_id';
+	type='string';
+	value='SKU';
+}
+
+fieldesc{
+	name='sku_name';
+	type='string';
+	value='iPhone - ';
+}
+
+fieldesc{
+	name='amount';
+	type='money';
+	value='$23.97';
+}
+
+fieldesc{
+	name='quantity';
+	type='int';
+	value='10';
+}
+
+fieldesc{
+	name='active';
+	type='bool';
+	value='true';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+shippingGroup
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='name';
+	type='string';
+	value='shipping to this address';
+}
+
+fieldesc{
+	name='biz_order';
+	type='order';
+	value='$(object)';
+}
+
+fieldesc{
+	name='address';
+	type='shipping_address';
+	value='$(object)';
+}
+
+fieldesc{
+	name='amount';
+	type='money';
+	value='$5.99';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+paymentGroup
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='name';
+	type='string';
+	value='visa card ending - ';
+}
+
+fieldesc{
+	name='biz_order';
+	type='order';
+	value='$(object)';
+}
+
+fieldesc{
+	name='card_number';
+	type='string';
+	value='4111 1111 1111 - ';
+}
+
+fieldesc{
+	name='billing_address';
+	type='billing_address';
+	value='$(object)';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+custSvcRep
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='email';
+	type='string_email';
+	value='pzhang@aaxischina.com';
+}
+
+fieldesc{
+	name='passwd';
+	type='string_password';
+	value='*******';
+}
+
+fieldesc{
+	name='role';
+	type='role';
+	value='$(object)';
+}
+
+fieldesc{
+	name='company';
+	type='seller_company';
+	value='$(object)';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+action
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='name';
+	type='string';
+	value='ACTION';
+}
+
+fieldesc{
+	name='internal_name';
+	type='string';
+	value='load';
+}
+
+fieldesc{
+	name='bo';
+	type='order';
+	value='$(object)';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+universalPrice
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='sku';
+	type='sku';
+	value='$(object)';
+}
+
+fieldesc{
+	name='price';
+	type='int';
+	value='1000';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+contractPrice
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='contract_id';
+	type='string';
+	value='C000001';
+}
+
+fieldesc{
+	name='sku';
+	type='sku';
+	value='$(object)';
+}
+
+fieldesc{
+	name='price';
+	type='int';
+	value='100';
+}
+
+fieldesc{
+	name='review';
+	type='contract_price_review';
+	value='$(object)';
+}
+
+fieldesc{
+	name='approval';
+	type='contract_price_approval';
+	value='$(object)';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+contractPriceApproval
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='who';
+	type='string';
+	value='approver';
+}
+
+fieldesc{
+	name='approve_time';
+	type='date';
+	value='2018-07-09';
+}
+
+fieldesc{
+	name='remark';
+	type='string';
+	value='Good please continue';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+ContractPriceList: referenced by contract_price.contractPriceList
+======================================
+contractPriceReview
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='who';
+	type='string';
+	value='approver';
+}
+
+fieldesc{
+	name='review_time';
+	type='date';
+	value='2018-07-09';
+}
+
+fieldesc{
+	name='remark';
+	type='string';
+	value='Good please continue';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+ContractPriceList: referenced by contract_price.contractPriceList
+======================================
+universalPriceApproval
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='who';
+	type='string';
+	value='approver';
+}
+
+fieldesc{
+	name='approve_time';
+	type='date';
+	value='2018-07-09';
+}
+
+fieldesc{
+	name='remark';
+	type='string';
+	value='Good please continue';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+universalPriceReview
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='who';
+	type='string';
+	value='approver';
+}
+
+fieldesc{
+	name='review_time';
+	type='date';
+	value='2018-07-09';
+}
+
+fieldesc{
+	name='remark';
+	type='string';
+	value='Good please continue';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+fixRiceSkuPromotion
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='sku';
+	type='sku';
+	value='$(object)';
+}
+
+fieldesc{
+	name='rules';
+	type='string';
+	value='id in (100,200)';
+}
+
+fieldesc{
+	name='price_to';
+	type='double';
+	value='1000.90';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+inventory
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='sku';
+	type='sku';
+	value='$(object)';
+}
+
+fieldesc{
+	name='warehouse';
+	type='warehouse';
+	value='$(object)';
+}
+
+fieldesc{
+	name='stock_level';
+	type='int';
+	value='1000000';
+}
+
+fieldesc{
+	name='preorderable';
+	type='int';
+	value='2000';
+}
+
+fieldesc{
+	name='backorderable';
+	type='int';
+	value='20';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+warehouse
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='display_name';
+	type='string';
+	value='LA Century City Warehouse';
+}
+
+fieldesc{
+	name='location';
+	type='string';
+	value='1900 AVE OF THE STARS - TOO EXPENSIVE';
+}
+
+fieldesc{
+	name='owner';
+	type='string_email';
+	value='mike@aaxiscommerce.com';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+InventoryList: referenced by inventory.inventoryList
+======================================
+sellerSite
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='site_id';
+	type='string';
+	value='www.clienta.com';
+}
+
+fieldesc{
+	name='home_page';
+	type='home_page';
+	value='$(object)';
+}
+
+fieldesc{
+	name='catalog';
+	type='catalog';
+	value='$(object)';
+}
+
+fieldesc{
+	name='marketing';
+	type='marketing_landing';
+	value='$(object)';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+homePage
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='title';
+	type='string';
+	value='Home Page';
+}
+
+fieldesc{
+	name='ver';
+	type='string';
+	value='V1.30';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+SellerSiteList: referenced by seller_site.sellerSiteList
+HeaderList: referenced by header.headerList
+NaviList: referenced by navi.naviList
+BannerList: referenced by banner.bannerList
+FooterList: referenced by footer.footerList
+======================================
+marketingLanding
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='title';
+	type='string';
+	value='Marketing Landing Page';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+SellerSiteList: referenced by seller_site.sellerSiteList
+MarketingBannerList: referenced by marketing_banner.marketingBannerList
+======================================
+marketingBanner
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='parent';
+	type='marketing_landing';
+	value='$(object)';
+}
+
+fieldesc{
+	name='image';
+	type='string_image';
+	value='long.jpg';
+}
+
+fieldesc{
+	name='link';
+	type='string';
+	value='/';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+header
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='page';
+	type='home_page';
+	value='$(object)';
+}
+
+fieldesc{
+	name='image';
+	type='string_image';
+	value='banner.jpg';
+}
+
+fieldesc{
+	name='action';
+	type='string';
+	value='html()';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+navi
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='page';
+	type='home_page';
+	value='$(object)';
+}
+
+fieldesc{
+	name='image';
+	type='string';
+	value='navi-item.jpg';
+}
+
+fieldesc{
+	name='action';
+	type='string';
+	value='html()';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+banner
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='page';
+	type='home_page';
+	value='$(object)';
+}
+
+fieldesc{
+	name='image';
+	type='string_image';
+	value='banner.jpg';
+}
+
+fieldesc{
+	name='action';
+	type='string';
+	value='html()';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+footer
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='page';
+	type='home_page';
+	value='$(object)';
+}
+
+fieldesc{
+	name='image';
+	type='string_image';
+	value='banner.jpg';
+}
+
+fieldesc{
+	name='action';
+	type='string';
+	value='html()';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+catalog
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='display_name';
+	type='string';
+	value='Cloth';
+}
+
+fieldesc{
+	name='seller_id';
+	type='string';
+	value='SC000001';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+SellerSiteList: referenced by seller_site.sellerSiteList
+LevelOneCatList: referenced by level_one_cat.levelOneCatList
+======================================
+levelOneCat
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='catalog';
+	type='catalog';
+	value='$(object)';
+}
+
+fieldesc{
+	name='display_name';
+	type='string';
+	value='Level One Cat';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+LevelTwoCatList: referenced by level_two_cat.levelTwoCatList
+======================================
+levelTwoCat
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='parent_cat';
+	type='level_one_cat';
+	value='$(object)';
+}
+
+fieldesc{
+	name='display_name';
+	type='string';
+	value='Level Two Cat';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+LevelThreeCatList: referenced by level_three_cat.levelThreeCatList
+======================================
+levelThreeCat
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='parent_cat';
+	type='level_two_cat';
+	value='$(object)';
+}
+
+fieldesc{
+	name='display_name';
+	type='string';
+	value='Level Three Cat';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+LevelFourCatList: referenced by level_four_cat.levelFourCatList
+LevelNCatList: referenced by level_n_cat.levelNCatList
+======================================
+levelFourCat
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='parent_cat';
+	type='level_three_cat';
+	value='$(object)';
+}
+
+fieldesc{
+	name='display_name';
+	type='string';
+	value='Level Four Cat';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+LevelFiveCatList: referenced by level_five_cat.levelFiveCatList
+======================================
+levelFiveCat
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='parent_cat';
+	type='level_four_cat';
+	value='$(object)';
+}
+
+fieldesc{
+	name='display_name';
+	type='string';
+	value='Level Five Cat';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+======================================
+levelNCat
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='parent_cat';
+	type='level_three_cat';
+	value='$(object)';
+}
+
+fieldesc{
+	name='display_name';
+	type='string';
+	value='Level N Cat';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+ProductList: referenced by product.productList
+======================================
+product
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='display_name';
+	type='string';
+	value='Jeans';
+}
+
+fieldesc{
+	name='parent_cat';
+	type='level_n_cat';
+	value='$(object)';
+}
+
+fieldesc{
+	name='brand';
+	type='brand';
+	value='$(object)';
+}
+
+fieldesc{
+	name='origin';
+	type='string';
+	value='China|US|Japan|French';
+}
+
+fieldesc{
+	name='remark';
+	type='string';
+	value='The brand a great that has Roadester, Model S and Model X, Model 3 is in development';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+SkuList: referenced by sku.skuList
+======================================
+sku
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='display_name';
+	type='string';
+	value='Jeans - Large';
+}
+
+fieldesc{
+	name='size';
+	type='string';
+	value='Large|Small|Medium';
+}
+
+fieldesc{
+	name='product';
+	type='product';
+	value='$(object)';
+}
+
+fieldesc{
+	name='active';
+	type='bool';
+	value='true';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+UniversalPriceList: referenced by universal_price.universalPriceList
+ContractPriceList: referenced by contract_price.contractPriceList
+FixRiceSkuPromotionList: referenced by fix_rice_sku_promotion.fixRiceSkuPromotionList
+InventoryList: referenced by inventory.inventoryList
+======================================
+brand
+fieldesc{
+	name='id';
+	type='string';
+	value='ABCD000001';
+}
+
+fieldesc{
+	name='brand_name';
+	type='string';
+	value='Telsa Auto';
+}
+
+fieldesc{
+	name='logo';
+	type='string_image';
+	value='logo.jpg';
+}
+
+fieldesc{
+	name='remark';
+	type='string';
+	value='The brand a great that has Roadester, Model S and Model X, Model 3 is in development';
+}
+
+fieldesc{
+	name='version';
+	type='int';
+	value='10';
+}
+
+ProductList: referenced by product.productList
+CostCenterList: referenced by cost_center.costCenterList
+CreditAccountList: referenced by credit_account.creditAccountList
+BillingAddressList: referenced by billing_address.billingAddressList
+EmployeeList: referenced by employee.employeeList
+OrderList: referenced by order.orderList
+ProfitCenterList: referenced by profit_center.profitCenterList
+CreditAccountList: referenced by credit_account.creditAccountList
+OrderList: referenced by order.orderList
+CustSvcRepList: referenced by cust_svc_rep.custSvcRepList
+OrderList: referenced by order.orderList
+OrderList: referenced by order.orderList
+ShippingGroupList: referenced by shipping_group.shippingGroupList
+PaymentGroupList: referenced by payment_group.paymentGroupList
+AssignmentList: referenced by assignment.assignmentList
+AccessList: referenced by access.accessList
+CustSvcRepList: referenced by cust_svc_rep.custSvcRepList
+AssignmentList: referenced by assignment.assignmentList
+LineItemList: referenced by line_item.lineItemList
+ShippingGroupList: referenced by shipping_group.shippingGroupList
+PaymentGroupList: referenced by payment_group.paymentGroupList
+ActionList: referenced by action.actionList
+OrderList: referenced by order.orderList
+OrderList: referenced by order.orderList
+OrderList: referenced by order.orderList
+OrderList: referenced by order.orderList
+OrderList: referenced by order.orderList
+OrderList: referenced by order.orderList
+ContractPriceList: referenced by contract_price.contractPriceList
+ContractPriceList: referenced by contract_price.contractPriceList
+InventoryList: referenced by inventory.inventoryList
+SellerSiteList: referenced by seller_site.sellerSiteList
+HeaderList: referenced by header.headerList
+NaviList: referenced by navi.naviList
+BannerList: referenced by banner.bannerList
+FooterList: referenced by footer.footerList
+SellerSiteList: referenced by seller_site.sellerSiteList
+MarketingBannerList: referenced by marketing_banner.marketingBannerList
+SellerSiteList: referenced by seller_site.sellerSiteList
+LevelOneCatList: referenced by level_one_cat.levelOneCatList
+LevelTwoCatList: referenced by level_two_cat.levelTwoCatList
+LevelThreeCatList: referenced by level_three_cat.levelThreeCatList
+LevelFourCatList: referenced by level_four_cat.levelFourCatList
+LevelNCatList: referenced by level_n_cat.levelNCatList
+LevelFiveCatList: referenced by level_five_cat.levelFiveCatList
+ProductList: referenced by product.productList
+SkuList: referenced by sku.skuList
+UniversalPriceList: referenced by universal_price.universalPriceList
+ContractPriceList: referenced by contract_price.contractPriceList
+FixRiceSkuPromotionList: referenced by fix_rice_sku_promotion.fixRiceSkuPromotionList
+InventoryList: referenced by inventory.inventoryList
+ProductList: referenced by product.productList

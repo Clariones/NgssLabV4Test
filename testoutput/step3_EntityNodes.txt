@@ -1,0 +1,559 @@
+b2b/access
+b2b/access_id prototype is common/string
+b2b/access_role_name prototype is common/string
+b2b/access_version prototype is common/integer
+b2b/action
+b2b/action_id prototype is common/string
+b2b/action_internal_name prototype is common/string
+b2b/action_name prototype is common/string
+b2b/action_version prototype is common/integer
+b2b/approval
+b2b/approval_approve_time prototype is common/date
+b2b/approval_id prototype is common/string
+b2b/approval_version prototype is common/integer
+b2b/approval_who prototype is common/string
+b2b/assignment
+b2b/assignment_assigned_date prototype is common/date
+b2b/assignment_id prototype is common/string
+b2b/assignment_version prototype is common/integer
+b2b/banner
+b2b/banner_action prototype is common/string
+b2b/banner_id prototype is common/string
+b2b/banner_image prototype is common/image
+b2b/banner_version prototype is common/integer
+b2b/billing_address
+b2b/billing_address_city prototype is common/string
+b2b/billing_address_country prototype is common/string
+b2b/billing_address_id prototype is common/string
+b2b/billing_address_line1 prototype is common/string
+b2b/billing_address_line2 prototype is common/string
+b2b/billing_address_state prototype is common/string
+b2b/billing_address_version prototype is common/integer
+b2b/brand
+b2b/brand_brand_name prototype is common/string
+b2b/brand_id prototype is common/string
+b2b/brand_logo prototype is common/image
+b2b/brand_remark prototype is common/string
+b2b/brand_version prototype is common/integer
+b2b/buyer_company
+b2b/buyer_company_founded prototype is common/date
+b2b/buyer_company_id prototype is common/string
+b2b/buyer_company_logo prototype is common/image
+b2b/buyer_company_name prototype is common/string
+b2b/buyer_company_owner prototype is common/email
+b2b/buyer_company_price_list prototype is common/string
+b2b/buyer_company_rating prototype is common/integer
+b2b/buyer_company_version prototype is common/integer
+b2b/catalog
+b2b/catalog_display_name prototype is common/string
+b2b/catalog_id prototype is common/string
+b2b/catalog_seller_id prototype is common/string
+b2b/catalog_version prototype is common/integer
+b2b/confirmation
+b2b/confirmation_confirm_time prototype is common/date
+b2b/confirmation_id prototype is common/string
+b2b/confirmation_version prototype is common/integer
+b2b/confirmation_who prototype is common/string
+b2b/contract_price
+b2b/contract_price_approval
+b2b/contract_price_approval_approve_time prototype is common/date
+b2b/contract_price_approval_id prototype is common/string
+b2b/contract_price_approval_remark prototype is common/string
+b2b/contract_price_approval_version prototype is common/integer
+b2b/contract_price_approval_who prototype is common/string
+b2b/contract_price_contract_id prototype is common/string
+b2b/contract_price_id prototype is common/string
+b2b/contract_price_price prototype is common/integer
+b2b/contract_price_review
+b2b/contract_price_review_id prototype is common/string
+b2b/contract_price_review_remark prototype is common/string
+b2b/contract_price_review_review_time prototype is common/date
+b2b/contract_price_review_version prototype is common/integer
+b2b/contract_price_review_who prototype is common/string
+b2b/contract_price_version prototype is common/integer
+b2b/cost_center
+b2b/cost_center_id prototype is common/string
+b2b/cost_center_name prototype is common/string
+b2b/cost_center_password prototype is common/string
+b2b/cost_center_version prototype is common/integer
+b2b/credit_account
+b2b/credit_account_authorized prototype is common/float
+b2b/credit_account_id prototype is common/string
+b2b/credit_account_name prototype is common/string
+b2b/credit_account_remain prototype is common/float
+b2b/credit_account_version prototype is common/integer
+b2b/cust_svc_rep
+b2b/cust_svc_rep_email prototype is common/email
+b2b/cust_svc_rep_id prototype is common/string
+b2b/cust_svc_rep_passwd prototype is common/string
+b2b/cust_svc_rep_version prototype is common/integer
+b2b/delivery
+b2b/delivery_delivery_time prototype is common/date
+b2b/delivery_id prototype is common/string
+b2b/delivery_version prototype is common/integer
+b2b/delivery_who prototype is common/string
+b2b/employee
+b2b/employee_cell_phone prototype is common/phoneNumber
+b2b/employee_email prototype is common/email
+b2b/employee_id prototype is common/string
+b2b/employee_name prototype is common/string
+b2b/employee_passwd prototype is common/string
+b2b/employee_version prototype is common/integer
+b2b/fix_rice_sku_promotion
+b2b/fix_rice_sku_promotion_id prototype is common/string
+b2b/fix_rice_sku_promotion_price_to prototype is common/float
+b2b/fix_rice_sku_promotion_rules prototype is common/string
+b2b/fix_rice_sku_promotion_version prototype is common/integer
+b2b/footer
+b2b/footer_action prototype is common/string
+b2b/footer_id prototype is common/string
+b2b/footer_image prototype is common/image
+b2b/footer_version prototype is common/integer
+b2b/header
+b2b/header_action prototype is common/string
+b2b/header_id prototype is common/string
+b2b/header_image prototype is common/image
+b2b/header_version prototype is common/integer
+b2b/home_page
+b2b/home_page_id prototype is common/string
+b2b/home_page_title prototype is common/string
+b2b/home_page_ver prototype is common/string
+b2b/home_page_version prototype is common/integer
+b2b/inventory
+b2b/inventory_backorderable prototype is common/integer
+b2b/inventory_id prototype is common/string
+b2b/inventory_preorderable prototype is common/integer
+b2b/inventory_stock_level prototype is common/integer
+b2b/inventory_version prototype is common/integer
+b2b/level_five_cat
+b2b/level_five_cat_display_name prototype is common/string
+b2b/level_five_cat_id prototype is common/string
+b2b/level_five_cat_version prototype is common/integer
+b2b/level_four_cat
+b2b/level_four_cat_display_name prototype is common/string
+b2b/level_four_cat_id prototype is common/string
+b2b/level_four_cat_version prototype is common/integer
+b2b/level_n_cat
+b2b/level_n_cat_display_name prototype is common/string
+b2b/level_n_cat_id prototype is common/string
+b2b/level_n_cat_version prototype is common/integer
+b2b/level_one_cat
+b2b/level_one_cat_display_name prototype is common/string
+b2b/level_one_cat_id prototype is common/string
+b2b/level_one_cat_version prototype is common/integer
+b2b/level_three_cat
+b2b/level_three_cat_display_name prototype is common/string
+b2b/level_three_cat_id prototype is common/string
+b2b/level_three_cat_version prototype is common/integer
+b2b/level_two_cat
+b2b/level_two_cat_display_name prototype is common/string
+b2b/level_two_cat_id prototype is common/string
+b2b/level_two_cat_version prototype is common/integer
+b2b/line_item
+b2b/line_item_active prototype is common/boolean
+b2b/line_item_amount prototype is common/money
+b2b/line_item_id prototype is common/string
+b2b/line_item_quantity prototype is common/integer
+b2b/line_item_sku_id prototype is common/string
+b2b/line_item_sku_name prototype is common/string
+b2b/line_item_version prototype is common/integer
+b2b/marketing_banner
+b2b/marketing_banner_id prototype is common/string
+b2b/marketing_banner_image prototype is common/image
+b2b/marketing_banner_link prototype is common/string
+b2b/marketing_banner_version prototype is common/integer
+b2b/marketing_landing
+b2b/marketing_landing_id prototype is common/string
+b2b/marketing_landing_title prototype is common/string
+b2b/marketing_landing_version prototype is common/integer
+b2b/navi
+b2b/navi_action prototype is common/string
+b2b/navi_id prototype is common/string
+b2b/navi_image prototype is common/string
+b2b/navi_version prototype is common/integer
+b2b/order
+b2b/order_id prototype is common/string
+b2b/order_mark_as_delete prototype is common/boolean
+b2b/order_title prototype is common/string
+b2b/order_total_amount prototype is common/money
+b2b/order_type prototype is common/string
+b2b/order_version prototype is common/integer
+b2b/payment_group
+b2b/payment_group_card_number prototype is common/string
+b2b/payment_group_id prototype is common/string
+b2b/payment_group_name prototype is common/string
+b2b/payment_group_version prototype is common/integer
+b2b/processing
+b2b/processing_id prototype is common/string
+b2b/processing_process_time prototype is common/date
+b2b/processing_version prototype is common/integer
+b2b/processing_who prototype is common/string
+b2b/product
+b2b/product_display_name prototype is common/string
+b2b/product_id prototype is common/string
+b2b/product_origin prototype is common/string
+b2b/product_remark prototype is common/string
+b2b/product_version prototype is common/integer
+b2b/profit_center
+b2b/profit_center_id prototype is common/string
+b2b/profit_center_name prototype is common/string
+b2b/profit_center_version prototype is common/integer
+b2b/recurring_info
+b2b/recurring_info_cron_expr prototype is common/string
+b2b/recurring_info_id prototype is common/string
+b2b/recurring_info_name prototype is common/string
+b2b/recurring_info_next_time prototype is common/date
+b2b/recurring_info_version prototype is common/integer
+b2b/role
+b2b/role_id prototype is common/string
+b2b/role_role_name prototype is common/string
+b2b/role_version prototype is common/integer
+b2b/seller_company
+b2b/seller_company_contract_text prototype is common/document
+b2b/seller_company_id prototype is common/string
+b2b/seller_company_logo prototype is common/image
+b2b/seller_company_name prototype is common/string
+b2b/seller_company_owner prototype is common/email
+b2b/seller_company_version prototype is common/integer
+b2b/seller_site
+b2b/seller_site_id prototype is common/string
+b2b/seller_site_site_id prototype is common/string
+b2b/seller_site_version prototype is common/integer
+b2b/shipment
+b2b/shipment_id prototype is common/string
+b2b/shipment_ship_time prototype is common/date
+b2b/shipment_version prototype is common/integer
+b2b/shipment_who prototype is common/string
+b2b/shipping_address
+b2b/shipping_address_city prototype is common/string
+b2b/shipping_address_country prototype is common/string
+b2b/shipping_address_id prototype is common/string
+b2b/shipping_address_line1 prototype is common/string
+b2b/shipping_address_line2 prototype is common/string
+b2b/shipping_address_state prototype is common/string
+b2b/shipping_address_version prototype is common/integer
+b2b/shipping_group
+b2b/shipping_group_amount prototype is common/money
+b2b/shipping_group_id prototype is common/string
+b2b/shipping_group_name prototype is common/string
+b2b/shipping_group_version prototype is common/integer
+b2b/sku
+b2b/sku_active prototype is common/boolean
+b2b/sku_display_name prototype is common/string
+b2b/sku_id prototype is common/string
+b2b/sku_size prototype is common/string
+b2b/sku_version prototype is common/integer
+b2b/universal_price
+b2b/universal_price_approval
+b2b/universal_price_approval_approve_time prototype is common/date
+b2b/universal_price_approval_id prototype is common/string
+b2b/universal_price_approval_remark prototype is common/string
+b2b/universal_price_approval_version prototype is common/integer
+b2b/universal_price_approval_who prototype is common/string
+b2b/universal_price_id prototype is common/string
+b2b/universal_price_price prototype is common/integer
+b2b/universal_price_review
+b2b/universal_price_review_id prototype is common/string
+b2b/universal_price_review_remark prototype is common/string
+b2b/universal_price_review_review_time prototype is common/date
+b2b/universal_price_review_version prototype is common/integer
+b2b/universal_price_review_who prototype is common/string
+b2b/universal_price_version prototype is common/integer
+b2b/warehouse
+b2b/warehouse_display_name prototype is common/string
+b2b/warehouse_id prototype is common/string
+b2b/warehouse_location prototype is common/string
+b2b/warehouse_owner prototype is common/email
+b2b/warehouse_version prototype is common/integer
+common/boolean
+common/date
+common/document
+common/email
+common/float
+common/image
+common/integer
+common/money
+common/phoneNumber
+common/string
+common/url
+
+===============After REF fields handled==============
+
+b2b/access
+b2b/access_id prototype is common/string
+b2b/access_role_name prototype is common/string
+b2b/access_version prototype is common/integer
+b2b/action
+b2b/action_id prototype is common/string
+b2b/action_internal_name prototype is common/string
+b2b/action_name prototype is common/string
+b2b/action_version prototype is common/integer
+b2b/approval
+b2b/approval_approve_time prototype is common/date
+b2b/approval_id prototype is common/string
+b2b/approval_version prototype is common/integer
+b2b/approval_who prototype is common/string
+b2b/assignment
+b2b/assignment_assigned_date prototype is common/date
+b2b/assignment_id prototype is common/string
+b2b/assignment_version prototype is common/integer
+b2b/banner
+b2b/banner_action prototype is common/string
+b2b/banner_id prototype is common/string
+b2b/banner_image prototype is common/image
+b2b/banner_version prototype is common/integer
+b2b/billing_address
+b2b/billing_address_city prototype is common/string
+b2b/billing_address_country prototype is common/string
+b2b/billing_address_id prototype is common/string
+b2b/billing_address_line1 prototype is common/string
+b2b/billing_address_line2 prototype is common/string
+b2b/billing_address_state prototype is common/string
+b2b/billing_address_version prototype is common/integer
+b2b/brand
+b2b/brand_brand_name prototype is common/string
+b2b/brand_id prototype is common/string
+b2b/brand_logo prototype is common/image
+b2b/brand_remark prototype is common/string
+b2b/brand_version prototype is common/integer
+b2b/buyer_company
+b2b/buyer_company_founded prototype is common/date
+b2b/buyer_company_id prototype is common/string
+b2b/buyer_company_logo prototype is common/image
+b2b/buyer_company_name prototype is common/string
+b2b/buyer_company_owner prototype is common/email
+b2b/buyer_company_price_list prototype is common/string
+b2b/buyer_company_rating prototype is common/integer
+b2b/buyer_company_version prototype is common/integer
+b2b/catalog
+b2b/catalog_display_name prototype is common/string
+b2b/catalog_id prototype is common/string
+b2b/catalog_seller_id prototype is common/string
+b2b/catalog_version prototype is common/integer
+b2b/confirmation
+b2b/confirmation_confirm_time prototype is common/date
+b2b/confirmation_id prototype is common/string
+b2b/confirmation_version prototype is common/integer
+b2b/confirmation_who prototype is common/string
+b2b/contract_price
+b2b/contract_price_approval
+b2b/contract_price_approval_approve_time prototype is common/date
+b2b/contract_price_approval_id prototype is common/string
+b2b/contract_price_approval_remark prototype is common/string
+b2b/contract_price_approval_version prototype is common/integer
+b2b/contract_price_approval_who prototype is common/string
+b2b/contract_price_contract_id prototype is common/string
+b2b/contract_price_id prototype is common/string
+b2b/contract_price_price prototype is common/integer
+b2b/contract_price_review
+b2b/contract_price_review_id prototype is common/string
+b2b/contract_price_review_remark prototype is common/string
+b2b/contract_price_review_review_time prototype is common/date
+b2b/contract_price_review_version prototype is common/integer
+b2b/contract_price_review_who prototype is common/string
+b2b/contract_price_version prototype is common/integer
+b2b/cost_center
+b2b/cost_center_id prototype is common/string
+b2b/cost_center_name prototype is common/string
+b2b/cost_center_password prototype is common/string
+b2b/cost_center_version prototype is common/integer
+b2b/credit_account
+b2b/credit_account_authorized prototype is common/float
+b2b/credit_account_id prototype is common/string
+b2b/credit_account_name prototype is common/string
+b2b/credit_account_remain prototype is common/float
+b2b/credit_account_version prototype is common/integer
+b2b/cust_svc_rep
+b2b/cust_svc_rep_email prototype is common/email
+b2b/cust_svc_rep_id prototype is common/string
+b2b/cust_svc_rep_passwd prototype is common/string
+b2b/cust_svc_rep_version prototype is common/integer
+b2b/delivery
+b2b/delivery_delivery_time prototype is common/date
+b2b/delivery_id prototype is common/string
+b2b/delivery_version prototype is common/integer
+b2b/delivery_who prototype is common/string
+b2b/employee
+b2b/employee_cell_phone prototype is common/phoneNumber
+b2b/employee_email prototype is common/email
+b2b/employee_id prototype is common/string
+b2b/employee_name prototype is common/string
+b2b/employee_passwd prototype is common/string
+b2b/employee_version prototype is common/integer
+b2b/fix_rice_sku_promotion
+b2b/fix_rice_sku_promotion_id prototype is common/string
+b2b/fix_rice_sku_promotion_price_to prototype is common/float
+b2b/fix_rice_sku_promotion_rules prototype is common/string
+b2b/fix_rice_sku_promotion_version prototype is common/integer
+b2b/footer
+b2b/footer_action prototype is common/string
+b2b/footer_id prototype is common/string
+b2b/footer_image prototype is common/image
+b2b/footer_version prototype is common/integer
+b2b/header
+b2b/header_action prototype is common/string
+b2b/header_id prototype is common/string
+b2b/header_image prototype is common/image
+b2b/header_version prototype is common/integer
+b2b/home_page
+b2b/home_page_id prototype is common/string
+b2b/home_page_title prototype is common/string
+b2b/home_page_ver prototype is common/string
+b2b/home_page_version prototype is common/integer
+b2b/inventory
+b2b/inventory_backorderable prototype is common/integer
+b2b/inventory_id prototype is common/string
+b2b/inventory_preorderable prototype is common/integer
+b2b/inventory_stock_level prototype is common/integer
+b2b/inventory_version prototype is common/integer
+b2b/level_five_cat
+b2b/level_five_cat_display_name prototype is common/string
+b2b/level_five_cat_id prototype is common/string
+b2b/level_five_cat_version prototype is common/integer
+b2b/level_four_cat
+b2b/level_four_cat_display_name prototype is common/string
+b2b/level_four_cat_id prototype is common/string
+b2b/level_four_cat_version prototype is common/integer
+b2b/level_n_cat
+b2b/level_n_cat_display_name prototype is common/string
+b2b/level_n_cat_id prototype is common/string
+b2b/level_n_cat_version prototype is common/integer
+b2b/level_one_cat
+b2b/level_one_cat_display_name prototype is common/string
+b2b/level_one_cat_id prototype is common/string
+b2b/level_one_cat_version prototype is common/integer
+b2b/level_three_cat
+b2b/level_three_cat_display_name prototype is common/string
+b2b/level_three_cat_id prototype is common/string
+b2b/level_three_cat_version prototype is common/integer
+b2b/level_two_cat
+b2b/level_two_cat_display_name prototype is common/string
+b2b/level_two_cat_id prototype is common/string
+b2b/level_two_cat_version prototype is common/integer
+b2b/line_item
+b2b/line_item_active prototype is common/boolean
+b2b/line_item_amount prototype is common/money
+b2b/line_item_id prototype is common/string
+b2b/line_item_quantity prototype is common/integer
+b2b/line_item_sku_id prototype is common/string
+b2b/line_item_sku_name prototype is common/string
+b2b/line_item_version prototype is common/integer
+b2b/marketing_banner
+b2b/marketing_banner_id prototype is common/string
+b2b/marketing_banner_image prototype is common/image
+b2b/marketing_banner_link prototype is common/string
+b2b/marketing_banner_version prototype is common/integer
+b2b/marketing_landing
+b2b/marketing_landing_id prototype is common/string
+b2b/marketing_landing_title prototype is common/string
+b2b/marketing_landing_version prototype is common/integer
+b2b/navi
+b2b/navi_action prototype is common/string
+b2b/navi_id prototype is common/string
+b2b/navi_image prototype is common/string
+b2b/navi_version prototype is common/integer
+b2b/order
+b2b/order_id prototype is common/string
+b2b/order_mark_as_delete prototype is common/boolean
+b2b/order_title prototype is common/string
+b2b/order_total_amount prototype is common/money
+b2b/order_type prototype is common/string
+b2b/order_version prototype is common/integer
+b2b/payment_group
+b2b/payment_group_card_number prototype is common/string
+b2b/payment_group_id prototype is common/string
+b2b/payment_group_name prototype is common/string
+b2b/payment_group_version prototype is common/integer
+b2b/processing
+b2b/processing_id prototype is common/string
+b2b/processing_process_time prototype is common/date
+b2b/processing_version prototype is common/integer
+b2b/processing_who prototype is common/string
+b2b/product
+b2b/product_display_name prototype is common/string
+b2b/product_id prototype is common/string
+b2b/product_origin prototype is common/string
+b2b/product_remark prototype is common/string
+b2b/product_version prototype is common/integer
+b2b/profit_center
+b2b/profit_center_id prototype is common/string
+b2b/profit_center_name prototype is common/string
+b2b/profit_center_version prototype is common/integer
+b2b/recurring_info
+b2b/recurring_info_cron_expr prototype is common/string
+b2b/recurring_info_id prototype is common/string
+b2b/recurring_info_name prototype is common/string
+b2b/recurring_info_next_time prototype is common/date
+b2b/recurring_info_version prototype is common/integer
+b2b/role
+b2b/role_id prototype is common/string
+b2b/role_role_name prototype is common/string
+b2b/role_version prototype is common/integer
+b2b/seller_company
+b2b/seller_company_contract_text prototype is common/document
+b2b/seller_company_id prototype is common/string
+b2b/seller_company_logo prototype is common/image
+b2b/seller_company_name prototype is common/string
+b2b/seller_company_owner prototype is common/email
+b2b/seller_company_version prototype is common/integer
+b2b/seller_site
+b2b/seller_site_id prototype is common/string
+b2b/seller_site_site_id prototype is common/string
+b2b/seller_site_version prototype is common/integer
+b2b/shipment
+b2b/shipment_id prototype is common/string
+b2b/shipment_ship_time prototype is common/date
+b2b/shipment_version prototype is common/integer
+b2b/shipment_who prototype is common/string
+b2b/shipping_address
+b2b/shipping_address_city prototype is common/string
+b2b/shipping_address_country prototype is common/string
+b2b/shipping_address_id prototype is common/string
+b2b/shipping_address_line1 prototype is common/string
+b2b/shipping_address_line2 prototype is common/string
+b2b/shipping_address_state prototype is common/string
+b2b/shipping_address_version prototype is common/integer
+b2b/shipping_group
+b2b/shipping_group_amount prototype is common/money
+b2b/shipping_group_id prototype is common/string
+b2b/shipping_group_name prototype is common/string
+b2b/shipping_group_version prototype is common/integer
+b2b/sku
+b2b/sku_active prototype is common/boolean
+b2b/sku_display_name prototype is common/string
+b2b/sku_id prototype is common/string
+b2b/sku_size prototype is common/string
+b2b/sku_version prototype is common/integer
+b2b/universal_price
+b2b/universal_price_approval
+b2b/universal_price_approval_approve_time prototype is common/date
+b2b/universal_price_approval_id prototype is common/string
+b2b/universal_price_approval_remark prototype is common/string
+b2b/universal_price_approval_version prototype is common/integer
+b2b/universal_price_approval_who prototype is common/string
+b2b/universal_price_id prototype is common/string
+b2b/universal_price_price prototype is common/integer
+b2b/universal_price_review
+b2b/universal_price_review_id prototype is common/string
+b2b/universal_price_review_remark prototype is common/string
+b2b/universal_price_review_review_time prototype is common/date
+b2b/universal_price_review_version prototype is common/integer
+b2b/universal_price_review_who prototype is common/string
+b2b/universal_price_version prototype is common/integer
+b2b/warehouse
+b2b/warehouse_display_name prototype is common/string
+b2b/warehouse_id prototype is common/string
+b2b/warehouse_location prototype is common/string
+b2b/warehouse_owner prototype is common/email
+b2b/warehouse_version prototype is common/integer
+common/boolean
+common/date
+common/document
+common/email
+common/float
+common/image
+common/integer
+common/money
+common/phoneNumber
+common/string
+common/url

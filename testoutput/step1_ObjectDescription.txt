@@ -1,0 +1,975 @@
+{buyer_company=buyer_company{
+	fields(8){
+		string	id('ABCD000001'), verb: false;
+		string	name('Aaxis - '), verb: false;
+		string	price_list('price9900'), verb: false;
+		int	rating('10|200'), verb: false;
+		string_image	logo('simple.jpg'), verb: false;
+		string_email	owner('philip@aaxischina.com'), verb: false;
+		date	founded('past()'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(5){
+		cost_center	belongs_to;
+		credit_account	buyer;
+		billing_address	company;
+		employee	company;
+		order	buyer;
+	}
+	vitual fields(0){
+	}
+}
+, seller_company=seller_company{
+	fields(6){
+		string	id('ABCD000001'), verb: false;
+		string	name('Snack Co. '), verb: false;
+		string_email	owner('philip@aaxischina.com'), verb: false;
+		string_image	logo('simple.jpg'), verb: false;
+		string_document	contract_text('x.doc'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(4){
+		profit_center	belongs_to;
+		credit_account	seller;
+		order	seller;
+		cust_svc_rep	company;
+	}
+	vitual fields(0){
+	}
+}
+, cost_center=cost_center{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		string	name('Cost Center - HR'), verb: false;
+		buyer_company	belongs_to('$(object)'), verb: false;
+		string_password	password('*********'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		order	cost_center;
+	}
+	vitual fields(0){
+	}
+}
+, cost_center.buyer_company=fieldesc{
+	name='belongs_to';
+	type='buyer_company';
+	value='$(object)';
+}
+, profit_center=profit_center{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		string	name('Cost Center - HR'), verb: false;
+		seller_company	belongs_to('$(object)'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		order	profit_center;
+	}
+	vitual fields(0){
+	}
+}
+, profit_center.seller_company=fieldesc{
+	name='belongs_to';
+	type='seller_company';
+	value='$(object)';
+}
+, credit_account=credit_account{
+	fields(7){
+		string	id('ABCD000001'), verb: false;
+		string	name('Main Account Payable - '), verb: false;
+		buyer_company	buyer('$(object)'), verb: false;
+		seller_company	seller('$(object)'), verb: false;
+		double	authorized('100000.99'), verb: false;
+		double	remain('100000.99'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, credit_account.buyer_company=fieldesc{
+	name='buyer';
+	type='buyer_company';
+	value='$(object)';
+}
+, credit_account.seller_company=fieldesc{
+	name='seller';
+	type='seller_company';
+	value='$(object)';
+}
+, shipping_address=shipping_address{
+	fields(7){
+		string	id('ABCD000001'), verb: false;
+		string	line1('1900 AVE OF THE STARTS - '), verb: false;
+		string	line2('Suite 555 - '), verb: false;
+		string	city('Century City - '), verb: false;
+		string	state('CA|VA|MA|PA|WA|LA'), verb: false;
+		string_country_code	country('US'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		shipping_group	address;
+	}
+	vitual fields(0){
+	}
+}
+, billing_address=billing_address{
+	fields(8){
+		string	id('ABCD000001'), verb: false;
+		buyer_company	company('$(object)'), verb: false;
+		string	line1('1900 AVE OF THE STARTS - '), verb: false;
+		string	line2('Suite 555 - '), verb: false;
+		string	city('Century City - '), verb: false;
+		string	state('CA|VA|MA|PA|WA|LA'), verb: false;
+		string_country_code	country('US'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		payment_group	billing_address;
+	}
+	vitual fields(0){
+	}
+}
+, billing_address.buyer_company=fieldesc{
+	name='company';
+	type='buyer_company';
+	value='$(object)';
+}
+, employee=employee{
+	fields(7){
+		string	id('ABCD000001'), verb: false;
+		string	name('Philip'), verb: false;
+		buyer_company	company('$(object)'), verb: false;
+		string_email	email('philip@aaxischina.com'), verb: false;
+		string_password	passwd('*******'), verb: false;
+		string_cn_phone	cell_phone('13878786655'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		assignment	user;
+	}
+	vitual fields(0){
+	}
+}
+, employee.buyer_company=fieldesc{
+	name='company';
+	type='buyer_company';
+	value='$(object)';
+}
+, role=role{
+	fields(3){
+		string	id('ABCD000001'), verb: false;
+		string	role_name('manager'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(2){
+		access	role;
+		cust_svc_rep	role;
+	}
+	vitual fields(0){
+	}
+}
+, assignment=assignment{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		employee	user('$(object)'), verb: false;
+		access	access('$(object)'), verb: false;
+		date	assigned_date('2019-1-1'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, assignment.employee=fieldesc{
+	name='user';
+	type='employee';
+	value='$(object)';
+}
+, assignment.access=fieldesc{
+	name='access';
+	type='access';
+	value='$(object)';
+}
+, access=access{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		string	role_name('x manager'), verb: false;
+		role	role('$(object)'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		assignment	access;
+	}
+	vitual fields(0){
+	}
+}
+, access.role=fieldesc{
+	name='role';
+	type='role';
+	value='$(object)';
+}
+, order=order{
+	fields(16){
+		string	id('ABCD000001'), verb: false;
+		buyer_company	buyer('$(object)'), verb: false;
+		seller_company	seller('$(object)'), verb: false;
+		string	title('House Buiding - '), verb: false;
+		cost_center	cost_center('$(object)'), verb: false;
+		profit_center	profit_center('$(object)'), verb: false;
+		money	total_amount('$3000000000.88'), verb: false;
+		string	type('ORDER|QUOTE|INVOICE'), verb: false;
+		bool	mark_as_delete('true'), verb: false;
+		confirmation	confirmation('$(object)'), verb: true;
+		approval	approval('$(object)'), verb: true;
+		processing	processing('$(object)'), verb: true;
+		shipment	shipment('$(object)'), verb: true;
+		delivery	delivery('$(object)'), verb: true;
+		recurring_info	recurring_info('$(object)'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(4){
+		line_item	biz_order;
+		shipping_group	biz_order;
+		payment_group	biz_order;
+		action	bo;
+	}
+	vitual fields(0){
+	}
+}
+, order.buyer_company=fieldesc{
+	name='buyer';
+	type='buyer_company';
+	value='$(object)';
+}
+, order.seller_company=fieldesc{
+	name='seller';
+	type='seller_company';
+	value='$(object)';
+}
+, order.cost_center=fieldesc{
+	name='cost_center';
+	type='cost_center';
+	value='$(object)';
+}
+, order.profit_center=fieldesc{
+	name='profit_center';
+	type='profit_center';
+	value='$(object)';
+}
+, order.confirmation=fieldesc{
+	name='confirmation';
+	type='confirmation';
+	value='$(object)';
+}
+, order.approval=fieldesc{
+	name='approval';
+	type='approval';
+	value='$(object)';
+}
+, order.processing=fieldesc{
+	name='processing';
+	type='processing';
+	value='$(object)';
+}
+, order.shipment=fieldesc{
+	name='shipment';
+	type='shipment';
+	value='$(object)';
+}
+, order.delivery=fieldesc{
+	name='delivery';
+	type='delivery';
+	value='$(object)';
+}
+, order.recurring_info=fieldesc{
+	name='recurring_info';
+	type='recurring_info';
+	value='$(object)';
+}
+, recurring_info=recurring_info{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		string	name('Order Recurring - '), verb: false;
+		date	next_time('2018-07-09'), verb: false;
+		string	cron_expr('*****08'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		order	recurring_info;
+	}
+	vitual fields(0){
+	}
+}
+, confirmation=confirmation{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		string	who('approver'), verb: false;
+		date	confirm_time('2018-07-09'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		order	confirmation;
+	}
+	vitual fields(0){
+	}
+}
+, shipment=shipment{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		string	who('carrier'), verb: false;
+		date	ship_time('2018-07-09'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		order	shipment;
+	}
+	vitual fields(0){
+	}
+}
+, delivery=delivery{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		string	who('deliverer'), verb: false;
+		date	delivery_time('2018-07-09'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		order	delivery;
+	}
+	vitual fields(0){
+	}
+}
+, processing=processing{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		string	who('processor'), verb: false;
+		date	process_time('2018-07-09'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		order	processing;
+	}
+	vitual fields(0){
+	}
+}
+, approval=approval{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		string	who('approver'), verb: false;
+		date	approve_time('2018-07-09'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		order	approval;
+	}
+	vitual fields(0){
+	}
+}
+, line_item=line_item{
+	fields(8){
+		string	id('ABCD000001'), verb: false;
+		order	biz_order('$(object)'), verb: false;
+		string	sku_id('SKU'), verb: false;
+		string	sku_name('iPhone - '), verb: false;
+		money	amount('$23.97'), verb: false;
+		int	quantity('10'), verb: false;
+		bool	active('true'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, line_item.order=fieldesc{
+	name='biz_order';
+	type='order';
+	value='$(object)';
+}
+, shipping_group=shipping_group{
+	fields(6){
+		string	id('ABCD000001'), verb: false;
+		string	name('shipping to this address'), verb: false;
+		order	biz_order('$(object)'), verb: false;
+		shipping_address	address('$(object)'), verb: false;
+		money	amount('$5.99'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, shipping_group.order=fieldesc{
+	name='biz_order';
+	type='order';
+	value='$(object)';
+}
+, shipping_group.shipping_address=fieldesc{
+	name='address';
+	type='shipping_address';
+	value='$(object)';
+}
+, payment_group=payment_group{
+	fields(6){
+		string	id('ABCD000001'), verb: false;
+		string	name('visa card ending - '), verb: false;
+		order	biz_order('$(object)'), verb: false;
+		string	card_number('4111 1111 1111 - '), verb: false;
+		billing_address	billing_address('$(object)'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, payment_group.order=fieldesc{
+	name='biz_order';
+	type='order';
+	value='$(object)';
+}
+, payment_group.billing_address=fieldesc{
+	name='billing_address';
+	type='billing_address';
+	value='$(object)';
+}
+, cust_svc_rep=cust_svc_rep{
+	fields(6){
+		string	id('ABCD000001'), verb: false;
+		string_email	email('pzhang@aaxischina.com'), verb: false;
+		string_password	passwd('*******'), verb: false;
+		role	role('$(object)'), verb: false;
+		seller_company	company('$(object)'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, cust_svc_rep.role=fieldesc{
+	name='role';
+	type='role';
+	value='$(object)';
+}
+, cust_svc_rep.seller_company=fieldesc{
+	name='company';
+	type='seller_company';
+	value='$(object)';
+}
+, action=action{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		string	name('ACTION'), verb: false;
+		string	internal_name('load'), verb: false;
+		order	bo('$(object)'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, action.order=fieldesc{
+	name='bo';
+	type='order';
+	value='$(object)';
+}
+, universal_price=universal_price{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		sku	sku('$(object)'), verb: false;
+		int	price('1000'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, universal_price.sku=fieldesc{
+	name='sku';
+	type='sku';
+	value='$(object)';
+}
+, contract_price=contract_price{
+	fields(7){
+		string	id('ABCD000001'), verb: false;
+		string	contract_id('C000001'), verb: false;
+		sku	sku('$(object)'), verb: false;
+		int	price('100'), verb: false;
+		contract_price_review	review('$(object)'), verb: true;
+		contract_price_approval	approval('$(object)'), verb: true;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, contract_price.sku=fieldesc{
+	name='sku';
+	type='sku';
+	value='$(object)';
+}
+, contract_price.contract_price_review=fieldesc{
+	name='review';
+	type='contract_price_review';
+	value='$(object)';
+}
+, contract_price.contract_price_approval=fieldesc{
+	name='approval';
+	type='contract_price_approval';
+	value='$(object)';
+}
+, contract_price_approval=contract_price_approval{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		string	who('approver'), verb: false;
+		date	approve_time('2018-07-09'), verb: false;
+		string	remark('Good please continue'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		contract_price	approval;
+	}
+	vitual fields(0){
+	}
+}
+, contract_price_review=contract_price_review{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		string	who('approver'), verb: false;
+		date	review_time('2018-07-09'), verb: false;
+		string	remark('Good please continue'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		contract_price	review;
+	}
+	vitual fields(0){
+	}
+}
+, universal_price_approval=universal_price_approval{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		string	who('approver'), verb: false;
+		date	approve_time('2018-07-09'), verb: false;
+		string	remark('Good please continue'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, universal_price_review=universal_price_review{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		string	who('approver'), verb: false;
+		date	review_time('2018-07-09'), verb: false;
+		string	remark('Good please continue'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, fix_rice_sku_promotion=fix_rice_sku_promotion{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		sku	sku('$(object)'), verb: false;
+		string	rules('id in (100,200)'), verb: false;
+		double	price_to('1000.90'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, fix_rice_sku_promotion.sku=fieldesc{
+	name='sku';
+	type='sku';
+	value='$(object)';
+}
+, inventory=inventory{
+	fields(7){
+		string	id('ABCD000001'), verb: false;
+		sku	sku('$(object)'), verb: false;
+		warehouse	warehouse('$(object)'), verb: false;
+		int	stock_level('1000000'), verb: false;
+		int	preorderable('2000'), verb: false;
+		int	backorderable('20'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, inventory.sku=fieldesc{
+	name='sku';
+	type='sku';
+	value='$(object)';
+}
+, inventory.warehouse=fieldesc{
+	name='warehouse';
+	type='warehouse';
+	value='$(object)';
+}
+, warehouse=warehouse{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		string	display_name('LA Century City Warehouse'), verb: false;
+		string	location('1900 AVE OF THE STARS - TOO EXPENSIVE'), verb: false;
+		string_email	owner('mike@aaxiscommerce.com'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		inventory	warehouse;
+	}
+	vitual fields(0){
+	}
+}
+, seller_site=seller_site{
+	fields(6){
+		string	id('ABCD000001'), verb: false;
+		string	site_id('www.clienta.com'), verb: false;
+		home_page	home_page('$(object)'), verb: false;
+		catalog	catalog('$(object)'), verb: false;
+		marketing_landing	marketing('$(object)'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, seller_site.home_page=fieldesc{
+	name='home_page';
+	type='home_page';
+	value='$(object)';
+}
+, seller_site.catalog=fieldesc{
+	name='catalog';
+	type='catalog';
+	value='$(object)';
+}
+, seller_site.marketing_landing=fieldesc{
+	name='marketing';
+	type='marketing_landing';
+	value='$(object)';
+}
+, home_page=home_page{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		string	title('Home Page'), verb: false;
+		string	ver('V1.30'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(5){
+		seller_site	home_page;
+		header	page;
+		navi	page;
+		banner	page;
+		footer	page;
+	}
+	vitual fields(0){
+	}
+}
+, marketing_landing=marketing_landing{
+	fields(3){
+		string	id('ABCD000001'), verb: false;
+		string	title('Marketing Landing Page'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(2){
+		seller_site	marketing;
+		marketing_banner	parent;
+	}
+	vitual fields(0){
+	}
+}
+, marketing_banner=marketing_banner{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		marketing_landing	parent('$(object)'), verb: false;
+		string_image	image('long.jpg'), verb: false;
+		string	link('/'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, marketing_banner.marketing_landing=fieldesc{
+	name='parent';
+	type='marketing_landing';
+	value='$(object)';
+}
+, header=header{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		home_page	page('$(object)'), verb: false;
+		string_image	image('banner.jpg'), verb: false;
+		string	action('html()'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, header.home_page=fieldesc{
+	name='page';
+	type='home_page';
+	value='$(object)';
+}
+, navi=navi{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		home_page	page('$(object)'), verb: false;
+		string	image('navi-item.jpg'), verb: false;
+		string	action('html()'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, navi.home_page=fieldesc{
+	name='page';
+	type='home_page';
+	value='$(object)';
+}
+, banner=banner{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		home_page	page('$(object)'), verb: false;
+		string_image	image('banner.jpg'), verb: false;
+		string	action('html()'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, banner.home_page=fieldesc{
+	name='page';
+	type='home_page';
+	value='$(object)';
+}
+, footer=footer{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		home_page	page('$(object)'), verb: false;
+		string_image	image('banner.jpg'), verb: false;
+		string	action('html()'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, footer.home_page=fieldesc{
+	name='page';
+	type='home_page';
+	value='$(object)';
+}
+, catalog=catalog{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		string	display_name('Cloth'), verb: false;
+		string	seller_id('SC000001'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(2){
+		seller_site	catalog;
+		level_one_cat	catalog;
+	}
+	vitual fields(0){
+	}
+}
+, level_one_cat=level_one_cat{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		catalog	catalog('$(object)'), verb: false;
+		string	display_name('Level One Cat'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		level_two_cat	parent_cat;
+	}
+	vitual fields(0){
+	}
+}
+, level_one_cat.catalog=fieldesc{
+	name='catalog';
+	type='catalog';
+	value='$(object)';
+}
+, level_two_cat=level_two_cat{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		level_one_cat	parent_cat('$(object)'), verb: false;
+		string	display_name('Level Two Cat'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		level_three_cat	parent_cat;
+	}
+	vitual fields(0){
+	}
+}
+, level_two_cat.level_one_cat=fieldesc{
+	name='parent_cat';
+	type='level_one_cat';
+	value='$(object)';
+}
+, level_three_cat=level_three_cat{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		level_two_cat	parent_cat('$(object)'), verb: false;
+		string	display_name('Level Three Cat'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(2){
+		level_four_cat	parent_cat;
+		level_n_cat	parent_cat;
+	}
+	vitual fields(0){
+	}
+}
+, level_three_cat.level_two_cat=fieldesc{
+	name='parent_cat';
+	type='level_two_cat';
+	value='$(object)';
+}
+, level_four_cat=level_four_cat{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		level_three_cat	parent_cat('$(object)'), verb: false;
+		string	display_name('Level Four Cat'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		level_five_cat	parent_cat;
+	}
+	vitual fields(0){
+	}
+}
+, level_four_cat.level_three_cat=fieldesc{
+	name='parent_cat';
+	type='level_three_cat';
+	value='$(object)';
+}
+, level_five_cat=level_five_cat{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		level_four_cat	parent_cat('$(object)'), verb: false;
+		string	display_name('Level Five Cat'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(0){
+	}
+	vitual fields(0){
+	}
+}
+, level_five_cat.level_four_cat=fieldesc{
+	name='parent_cat';
+	type='level_four_cat';
+	value='$(object)';
+}
+, level_n_cat=level_n_cat{
+	fields(4){
+		string	id('ABCD000001'), verb: false;
+		level_three_cat	parent_cat('$(object)'), verb: false;
+		string	display_name('Level N Cat'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		product	parent_cat;
+	}
+	vitual fields(0){
+	}
+}
+, level_n_cat.level_three_cat=fieldesc{
+	name='parent_cat';
+	type='level_three_cat';
+	value='$(object)';
+}
+, product=product{
+	fields(7){
+		string	id('ABCD000001'), verb: false;
+		string	display_name('Jeans'), verb: false;
+		level_n_cat	parent_cat('$(object)'), verb: false;
+		brand	brand('$(object)'), verb: false;
+		string	origin('China|US|Japan|French'), verb: false;
+		string	remark('The brand a great that has Roadester, Model S and Model X, Model 3 is in development'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		sku	product;
+	}
+	vitual fields(0){
+	}
+}
+, product.level_n_cat=fieldesc{
+	name='parent_cat';
+	type='level_n_cat';
+	value='$(object)';
+}
+, product.brand=fieldesc{
+	name='brand';
+	type='brand';
+	value='$(object)';
+}
+, sku=sku{
+	fields(6){
+		string	id('ABCD000001'), verb: false;
+		string	display_name('Jeans - Large'), verb: false;
+		string	size('Large|Small|Medium'), verb: false;
+		product	product('$(object)'), verb: false;
+		bool	active('true'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(4){
+		universal_price	sku;
+		contract_price	sku;
+		fix_rice_sku_promotion	sku;
+		inventory	sku;
+	}
+	vitual fields(0){
+	}
+}
+, sku.product=fieldesc{
+	name='product';
+	type='product';
+	value='$(object)';
+}
+, brand=brand{
+	fields(5){
+		string	id('ABCD000001'), verb: false;
+		string	brand_name('Telsa Auto'), verb: false;
+		string_image	logo('logo.jpg'), verb: false;
+		string	remark('The brand a great that has Roadester, Model S and Model X, Model 3 is in development'), verb: false;
+		int	version('10'), verb: false;
+	}
+	references field(1){
+		product	brand;
+	}
+	vitual fields(0){
+	}
+}
+}
