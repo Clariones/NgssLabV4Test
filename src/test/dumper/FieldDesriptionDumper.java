@@ -8,7 +8,7 @@ import com.terapico.system.FieldDescriptor;
 import com.terapico.system.ObjectDescriptor;
 
 public class FieldDesriptionDumper extends AbsFileDumper implements Dumper {
-
+	
 	@Override
 	protected File getOutputFile() {
 		return new File("testoutput/step2.1_FieldDescription.txt");

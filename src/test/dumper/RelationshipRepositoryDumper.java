@@ -19,7 +19,8 @@ import org.ngss.platform.relationship.RelationshipAttributes;
 import org.ngss.platform.relationship.RelationshipFactory;
 
 public class RelationshipRepositoryDumper extends AbsFileDumper implements Dumper {
-
+	protected String lastName = "";
+	
 	@Override
 	protected File getOutputFile() {
 		return new File("testoutput/step4_Relationships.txt");
@@ -33,13 +34,24 @@ public class RelationshipRepositoryDumper extends AbsFileDumper implements Dumpe
 			public int compare(Relationship o1, Relationship o2) {
 				String key1 = o1.getParticipants().get(o1.getDefinition().getMasterRole()).getKey();
 				String key2 = o2.getParticipants().get(o2.getDefinition().getMasterRole()).getKey();
+				if (key1.equals(key2)){
+					return (int) (o1.getId() - o2.getId());
+				}
 				return key1.compareTo(key2);
 			}
 		});
 		for(Relationship rela : allRelas){
 			EntityNode masterNode = rela.getParticipants().get(rela.getDefinition().getMasterRole());
 			StringBuilder sb = new StringBuilder();
-			sb.append(rela.getId()).append(": ").append(masterNode.getKey()).append(' ');
+			if (lastName.equals(masterNode.getKey())){
+				sb.append(String.format("%"+lastName.length()+"s", ""));
+			}else{
+				lastName = masterNode.getKey();
+				sb.append('\n').append(lastName);
+			}
+			sb.append(": ").append(rela.getId()).append(' ');
+			
+			
 			sb.append(rela.getDefinition().getKey()).append(" with");
 			Iterator<Entry<ActingRole, ParticipantDefinition>> it = rela.getDefinition().getParticipants().entrySet().iterator();
 			while(it.hasNext()){

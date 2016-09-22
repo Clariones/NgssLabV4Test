@@ -1,10 +1,12 @@
 package test.dumper;
 
-import org.ngss.platform.entitynode.EntityNodeFactory;
-import org.ngss.platform.logicalunit.LogicalUnitFactory;
-import org.ngss.platform.relationship.RelationshipFactory;
+import java.util.List;
+
+import org.ngss.platform.artifact.Artifact;
 
 import com.terapico.system.ObjectDescriptor;
+
+import test.dumper.artifact.ArtifactDumperManager;
 
 public class DumperUtils {
 	protected static Dumper objDesriptionDumper = new ObjDescriptionDumper();
@@ -13,6 +15,8 @@ public class DumperUtils {
 	protected static Dumper entityNodeRepositoryDumper = new EntityNodeRepositoryDumper();
 	protected static Dumper relationshipRepositoryDumper = new RelationshipRepositoryDumper();
 	protected static Dumper membershipDumper = new MembershipDumper();
+	protected static Dumper relationshipStdoutDumper = new RelationshipStdoutDumper();
+	protected static Dumper artifactDumperManager = new ArtifactDumperManager();
 	
 	protected static ObjectDescriptor curObjDesp = null;
 	
@@ -45,5 +49,11 @@ public class DumperUtils {
 	}
 	public static void logicalUnitMembers(Object luFactory) {
 		doDump(membershipDumper, luFactory);
+	}
+	public static void relationship(Object obj){
+		doDump(relationshipStdoutDumper, obj);
+	}
+	public static void artifacts(List<Artifact> artifacts) {
+		doDump(artifactDumperManager, artifacts);
 	}
 }

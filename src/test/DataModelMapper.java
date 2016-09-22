@@ -53,14 +53,20 @@ public class DataModelMapper {
 			while (refIt.hasNext()) {
 				CMRField rf = (CMRField) refIt.next();
 
+				String refKey =rf.getLocalRefObj().getObjName() +"."+ rf.getRefObjectDesc().getObjName();
+				FieldDescriptor fd = (FieldDescriptor) oc.getERDic().get(refKey);
+				if (fd != null && fd.isVerbField()){
+					
+				}
+				
 				String name = objDesp.getObjName();
 				EntityNode ownerNode = entityRepo.getOrCreate(name, userDomain);
 				String refType = rf.getType();
 				EntityNode refNode = entityRepo.getOrCreate(refType, userDomain);
 				assert(refNode.getRelationships().size() > 0) : "Should not be an empty node";
-
+				
 				for (Relationship rela : refNode.getRelationships()) {
-					handleRefField(ownerNode, refNode, rela);
+					handleRefField(ownerNode, refNode, fd, rf, rela);
 				}
 			}
 		}
@@ -70,7 +76,7 @@ public class DataModelMapper {
 		DumperUtils.relationships(NgssContext.getRelationshipFactory());
 	}
 
-	protected void handleRefField(EntityNode ownerNode, EntityNode refNode, Relationship rela) {
+	protected void handleRefField(EntityNode ownerNode, EntityNode refNode, FieldDescriptor fieldDscp, CMRField refield, Relationship rela) {
 		ActingRole masterRole = rela.getDefinition().getMasterRole();
 		if (!rela.getParticipants().containsValue(ownerNode)) {
 			return;
@@ -86,7 +92,12 @@ public class DataModelMapper {
 		ActingRole roleTo = NgssContext.getActingRoleRepository().getOrCreate(ActingRole.TO);
 		newRela.addParticipant(roleFrom, ownerNode, null);
 		newRela.addParticipant(roleTo, refNode, null);
-		newRela.setParticipantAttribute(roleTo, RelationshipAttributes.multiplicity, Multiplicity.many);
+		if (fieldDscp != null && fieldDscp.isVerbField()){
+			newRela.setParticipantAttribute(roleTo, RelationshipAttributes.multiplicity, Multiplicity.only_one);
+		}else{
+			newRela.setParticipantAttribute(roleTo, RelationshipAttributes.multiplicity, Multiplicity.many);
+		}
+		newRela.setParticipantAttribute(roleTo, RelationshipAttributes.memberName, refield.getFieldName());
 		ownerNode.addRelationship(newRela);
 	}
 
@@ -129,6 +140,7 @@ public class DataModelMapper {
 			ActingRole roleTo = NgssContext.getActingRoleRepository().getOrCreate(ActingRole.TO);
 			hasMember.addParticipant(roleFrom, owner, null);
 			hasMember.addParticipant(roleTo, member, null);
+			hasMember.setParticipantAttribute(roleTo, RelationshipAttributes.memberName, fldDesp.getName());
 			if (fldDesp.isVerbField()){
 				hasMember.setParticipantAttribute(roleTo, RelationshipAttributes.is_action, true);
 			}
@@ -140,7 +152,7 @@ public class DataModelMapper {
 						.get(RelationshipDefinition.NEED_ACTION, commonDomain));
 				needAction.addParticipant(roleFrom, owner, null);
 				needAction.addParticipant(roleTo, member, null);
-				owner.addRelationship(hasMember);
+				owner.addRelationship(needAction);
 			}
 			
 			return;
