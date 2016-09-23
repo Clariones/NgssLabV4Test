@@ -1,42 +1,27 @@
+=====web console create page for b2b/banner=====
+  I want a LABEL, only show value of banner.id(a common/string)
+  I want a SEARCH box, to select banner.page(a b2b/home_page)
+  I want a INPUT box, to directly input banner.image(a common/image)
+  I want a INPUT box, to directly input banner.action(a common/string)
+  I want a INPUT box, to directly input banner.version(a common/integer)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/contract_price=====
+  I want a LABEL, only show value of contract_price.id(a common/string)
+  I want a INPUT box, to directly input contract_price.contract_id(a common/string)
+  I want a SEARCH box, to select contract_price.sku(a b2b/sku)
+  I want a INPUT box, to directly input contract_price.price(a common/integer)
+  I want a SEARCH box, to select contract_price.review(a b2b/contract_price_review)
+  I want a SEARCH box, to select contract_price.approval(a b2b/contract_price_approval)
+  I want a INPUT box, to directly input contract_price.version(a common/integer)
+  I want submit and cancel functionality in this page for all fields
+
 =====web console create page for b2b/assignment=====
   I want a LABEL, only show value of assignment.id(a common/string)
   I want a SEARCH box, to select assignment.user(a b2b/employee)
   I want a SEARCH box, to select assignment.access(a b2b/access)
   I want a INPUT box, to directly input assignment.assigned_date(a common/date)
   I want a INPUT box, to directly input assignment.version(a common/integer)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/footer=====
-  I want a LABEL, only show value of footer.id(a common/string)
-  I want a SEARCH box, to select footer.page(a b2b/home_page)
-  I want a INPUT box, to directly input footer.image(a common/image)
-  I want a INPUT box, to directly input footer.action(a common/string)
-  I want a INPUT box, to directly input footer.version(a common/integer)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/level_four_cat=====
-  I want a LABEL, only show value of level_four_cat.id(a common/string)
-  I want a SEARCH box, to select level_four_cat.parent_cat(a b2b/level_three_cat)
-  I want a INPUT box, to directly input level_four_cat.display_name(a common/string)
-  I want a INPUT box, to directly input level_four_cat.version(a common/integer)
-  I want a SEARCH box, to select level_four_cat.LevelFiveCatList(a b2b/level_five_cat)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/seller_site=====
-  I want a LABEL, only show value of seller_site.id(a common/string)
-  I want a INPUT box, to directly input seller_site.site_id(a common/string)
-  I want a SEARCH box, to select seller_site.home_page(a b2b/home_page)
-  I want a SEARCH box, to select seller_site.catalog(a b2b/catalog)
-  I want a SEARCH box, to select seller_site.marketing(a b2b/marketing_landing)
-  I want a INPUT box, to directly input seller_site.version(a common/integer)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/universal_price_review=====
-  I want a LABEL, only show value of universal_price_review.id(a common/string)
-  I want a INPUT box, to directly input universal_price_review.who(a common/string)
-  I want a INPUT box, to directly input universal_price_review.review_time(a common/date)
-  I want a INPUT box, to directly input universal_price_review.remark(a common/string)
-  I want a INPUT box, to directly input universal_price_review.version(a common/integer)
   I want submit and cancel functionality in this page for all fields
 
 =====web console create page for b2b/line_item=====
@@ -50,69 +35,6 @@
   I want a INPUT box, to directly input line_item.version(a common/integer)
   I want submit and cancel functionality in this page for all fields
 
-=====web console create page for b2b/level_n_cat=====
-  I want a LABEL, only show value of level_n_cat.id(a common/string)
-  I want a SEARCH box, to select level_n_cat.parent_cat(a b2b/level_three_cat)
-  I want a INPUT box, to directly input level_n_cat.display_name(a common/string)
-  I want a INPUT box, to directly input level_n_cat.version(a common/integer)
-  I want a SEARCH box, to select level_n_cat.ProductList(a b2b/product)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/banner=====
-  I want a LABEL, only show value of banner.id(a common/string)
-  I want a SEARCH box, to select banner.page(a b2b/home_page)
-  I want a INPUT box, to directly input banner.image(a common/image)
-  I want a INPUT box, to directly input banner.action(a common/string)
-  I want a INPUT box, to directly input banner.version(a common/integer)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/brand=====
-  I want a LABEL, only show value of brand.id(a common/string)
-  I want a INPUT box, to directly input brand.brand_name(a common/string)
-  I want a INPUT box, to directly input brand.logo(a common/image)
-  I want a INPUT box, to directly input brand.remark(a common/string)
-  I want a INPUT box, to directly input brand.version(a common/integer)
-  I want a SEARCH box, to select brand.ProductList(a b2b/product)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/level_one_cat=====
-  I want a LABEL, only show value of level_one_cat.id(a common/string)
-  I want a SEARCH box, to select level_one_cat.catalog(a b2b/catalog)
-  I want a INPUT box, to directly input level_one_cat.display_name(a common/string)
-  I want a INPUT box, to directly input level_one_cat.version(a common/integer)
-  I want a SEARCH box, to select level_one_cat.LevelTwoCatList(a b2b/level_two_cat)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/processing=====
-  I want a LABEL, only show value of processing.id(a common/string)
-  I want a INPUT box, to directly input processing.who(a common/string)
-  I want a INPUT box, to directly input processing.process_time(a common/date)
-  I want a INPUT box, to directly input processing.version(a common/integer)
-  I want a SEARCH box, to select processing.OrderList(a b2b/order)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/contract_price_review=====
-  I want a LABEL, only show value of contract_price_review.id(a common/string)
-  I want a INPUT box, to directly input contract_price_review.who(a common/string)
-  I want a INPUT box, to directly input contract_price_review.review_time(a common/date)
-  I want a INPUT box, to directly input contract_price_review.remark(a common/string)
-  I want a INPUT box, to directly input contract_price_review.version(a common/integer)
-  I want a SEARCH box, to select contract_price_review.ContractPriceList(a b2b/contract_price)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/seller_company=====
-  I want a LABEL, only show value of seller_company.id(a common/string)
-  I want a INPUT box, to directly input seller_company.name(a common/string)
-  I want a INPUT box, to directly input seller_company.owner(a common/email)
-  I want a INPUT box, to directly input seller_company.logo(a common/image)
-  I want a INPUT box, to directly input seller_company.contract_text(a common/document)
-  I want a INPUT box, to directly input seller_company.version(a common/integer)
-  I want a SEARCH box, to select seller_company.ProfitCenterList(a b2b/profit_center)
-  I want a SEARCH box, to select seller_company.CreditAccountList(a b2b/credit_account)
-  I want a SEARCH box, to select seller_company.OrderList(a b2b/order)
-  I want a SEARCH box, to select seller_company.CustSvcRepList(a b2b/cust_svc_rep)
-  I want submit and cancel functionality in this page for all fields
-
 =====web console create page for b2b/cust_svc_rep=====
   I want a LABEL, only show value of cust_svc_rep.id(a common/string)
   I want a INPUT box, to directly input cust_svc_rep.email(a common/email)
@@ -122,113 +44,12 @@
   I want a INPUT box, to directly input cust_svc_rep.version(a common/integer)
   I want submit and cancel functionality in this page for all fields
 
-=====web console create page for b2b/level_three_cat=====
-  I want a LABEL, only show value of level_three_cat.id(a common/string)
-  I want a SEARCH box, to select level_three_cat.parent_cat(a b2b/level_two_cat)
-  I want a INPUT box, to directly input level_three_cat.display_name(a common/string)
-  I want a INPUT box, to directly input level_three_cat.version(a common/integer)
-  I want a SEARCH box, to select level_three_cat.LevelFourCatList(a b2b/level_four_cat)
-  I want a SEARCH box, to select level_three_cat.LevelNCatList(a b2b/level_n_cat)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/access=====
-  I want a LABEL, only show value of access.id(a common/string)
-  I want a INPUT box, to directly input access.role_name(a common/string)
-  I want a SEARCH box, to select access.role(a b2b/role)
-  I want a INPUT box, to directly input access.version(a common/integer)
-  I want a SEARCH box, to select access.AssignmentList(a b2b/assignment)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/fix_rice_sku_promotion=====
-  I want a LABEL, only show value of fix_rice_sku_promotion.id(a common/string)
-  I want a SEARCH box, to select fix_rice_sku_promotion.sku(a b2b/sku)
-  I want a INPUT box, to directly input fix_rice_sku_promotion.rules(a common/string)
-  I want a INPUT box, to directly input fix_rice_sku_promotion.price_to(a common/float)
-  I want a INPUT box, to directly input fix_rice_sku_promotion.version(a common/integer)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/action=====
-  I want a LABEL, only show value of action.id(a common/string)
-  I want a INPUT box, to directly input action.name(a common/string)
-  I want a INPUT box, to directly input action.internal_name(a common/string)
-  I want a SEARCH box, to select action.bo(a b2b/order)
-  I want a INPUT box, to directly input action.version(a common/integer)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/profit_center=====
-  I want a LABEL, only show value of profit_center.id(a common/string)
-  I want a INPUT box, to directly input profit_center.name(a common/string)
-  I want a SEARCH box, to select profit_center.belongs_to(a b2b/seller_company)
-  I want a INPUT box, to directly input profit_center.version(a common/integer)
-  I want a SEARCH box, to select profit_center.OrderList(a b2b/order)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/approval=====
-  I want a LABEL, only show value of approval.id(a common/string)
-  I want a INPUT box, to directly input approval.who(a common/string)
-  I want a INPUT box, to directly input approval.approve_time(a common/date)
-  I want a INPUT box, to directly input approval.version(a common/integer)
-  I want a SEARCH box, to select approval.OrderList(a b2b/order)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/inventory=====
-  I want a LABEL, only show value of inventory.id(a common/string)
-  I want a SEARCH box, to select inventory.sku(a b2b/sku)
-  I want a SEARCH box, to select inventory.warehouse(a b2b/warehouse)
-  I want a INPUT box, to directly input inventory.stock_level(a common/integer)
-  I want a INPUT box, to directly input inventory.preorderable(a common/integer)
-  I want a INPUT box, to directly input inventory.backorderable(a common/integer)
-  I want a INPUT box, to directly input inventory.version(a common/integer)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/home_page=====
-  I want a LABEL, only show value of home_page.id(a common/string)
-  I want a INPUT box, to directly input home_page.title(a common/string)
-  I want a INPUT box, to directly input home_page.ver(a common/string)
-  I want a INPUT box, to directly input home_page.version(a common/integer)
-  I want a SEARCH box, to select home_page.SellerSiteList(a b2b/seller_site)
-  I want a SEARCH box, to select home_page.HeaderList(a b2b/header)
-  I want a SEARCH box, to select home_page.NaviList(a b2b/navi)
-  I want a SEARCH box, to select home_page.BannerList(a b2b/banner)
-  I want a SEARCH box, to select home_page.FooterList(a b2b/footer)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/role=====
-  I want a LABEL, only show value of role.id(a common/string)
-  I want a INPUT box, to directly input role.role_name(a common/string)
-  I want a INPUT box, to directly input role.version(a common/integer)
-  I want a SEARCH box, to select role.AccessList(a b2b/access)
-  I want a SEARCH box, to select role.CustSvcRepList(a b2b/cust_svc_rep)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/shipment=====
-  I want a LABEL, only show value of shipment.id(a common/string)
-  I want a INPUT box, to directly input shipment.who(a common/string)
-  I want a INPUT box, to directly input shipment.ship_time(a common/date)
-  I want a INPUT box, to directly input shipment.version(a common/integer)
-  I want a SEARCH box, to select shipment.OrderList(a b2b/order)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/product=====
-  I want a LABEL, only show value of product.id(a common/string)
-  I want a INPUT box, to directly input product.display_name(a common/string)
-  I want a SEARCH box, to select product.parent_cat(a b2b/level_n_cat)
-  I want a SEARCH box, to select product.brand(a b2b/brand)
-  I want a INPUT box, to directly input product.origin(a common/string)
-  I want a INPUT box, to directly input product.remark(a common/string)
-  I want a INPUT box, to directly input product.version(a common/integer)
-  I want a SEARCH box, to select product.SkuList(a b2b/sku)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/shipping_address=====
-  I want a LABEL, only show value of shipping_address.id(a common/string)
-  I want a INPUT box, to directly input shipping_address.line1(a common/string)
-  I want a INPUT box, to directly input shipping_address.line2(a common/string)
-  I want a INPUT box, to directly input shipping_address.city(a common/string)
-  I want a INPUT box, to directly input shipping_address.state(a common/string)
-  I want a INPUT box, to directly input shipping_address.country(a common/string)
-  I want a INPUT box, to directly input shipping_address.version(a common/integer)
-  I want a SEARCH box, to select shipping_address.ShippingGroupList(a b2b/shipping_group)
+=====web console create page for b2b/marketing_banner=====
+  I want a LABEL, only show value of marketing_banner.id(a common/string)
+  I want a SEARCH box, to select marketing_banner.parent(a b2b/marketing_landing)
+  I want a INPUT box, to directly input marketing_banner.image(a common/image)
+  I want a INPUT box, to directly input marketing_banner.link(a common/string)
+  I want a INPUT box, to directly input marketing_banner.version(a common/integer)
   I want submit and cancel functionality in this page for all fields
 
 =====web console create page for b2b/sku=====
@@ -244,56 +65,73 @@
   I want a SEARCH box, to select sku.InventoryList(a b2b/inventory)
   I want submit and cancel functionality in this page for all fields
 
-=====web console create page for b2b/shipping_group=====
-  I want a LABEL, only show value of shipping_group.id(a common/string)
-  I want a INPUT box, to directly input shipping_group.name(a common/string)
-  I want a SEARCH box, to select shipping_group.biz_order(a b2b/order)
-  I want a SEARCH box, to select shipping_group.address(a b2b/shipping_address)
-  I want a INPUT box, to directly input shipping_group.amount(a common/money)
-  I want a INPUT box, to directly input shipping_group.version(a common/integer)
+=====web console create page for b2b/level_two_cat=====
+  I want a LABEL, only show value of level_two_cat.id(a common/string)
+  I want a SEARCH box, to select level_two_cat.parent_cat(a b2b/level_one_cat)
+  I want a INPUT box, to directly input level_two_cat.display_name(a common/string)
+  I want a INPUT box, to directly input level_two_cat.version(a common/integer)
+  I want a SEARCH box, to select level_two_cat.LevelThreeCatList(a b2b/level_three_cat)
   I want submit and cancel functionality in this page for all fields
 
-=====web console create page for b2b/recurring_info=====
-  I want a LABEL, only show value of recurring_info.id(a common/string)
-  I want a INPUT box, to directly input recurring_info.name(a common/string)
-  I want a INPUT box, to directly input recurring_info.next_time(a common/date)
-  I want a INPUT box, to directly input recurring_info.cron_expr(a common/string)
-  I want a INPUT box, to directly input recurring_info.version(a common/integer)
-  I want a SEARCH box, to select recurring_info.OrderList(a b2b/order)
+=====web console create page for b2b/product=====
+  I want a LABEL, only show value of product.id(a common/string)
+  I want a INPUT box, to directly input product.display_name(a common/string)
+  I want a SEARCH box, to select product.parent_cat(a b2b/level_n_cat)
+  I want a SEARCH box, to select product.brand(a b2b/brand)
+  I want a INPUT box, to directly input product.origin(a common/string)
+  I want a INPUT box, to directly input product.remark(a common/string)
+  I want a INPUT box, to directly input product.version(a common/integer)
+  I want a SEARCH box, to select product.SkuList(a b2b/sku)
   I want submit and cancel functionality in this page for all fields
 
-=====web console create page for b2b/catalog=====
-  I want a LABEL, only show value of catalog.id(a common/string)
-  I want a INPUT box, to directly input catalog.display_name(a common/string)
-  I want a INPUT box, to directly input catalog.seller_id(a common/string)
-  I want a INPUT box, to directly input catalog.version(a common/integer)
-  I want a SEARCH box, to select catalog.SellerSiteList(a b2b/seller_site)
-  I want a SEARCH box, to select catalog.LevelOneCatList(a b2b/level_one_cat)
+=====web console create page for b2b/payment_group=====
+  I want a LABEL, only show value of payment_group.id(a common/string)
+  I want a INPUT box, to directly input payment_group.name(a common/string)
+  I want a SEARCH box, to select payment_group.biz_order(a b2b/order)
+  I want a INPUT box, to directly input payment_group.card_number(a common/string)
+  I want a SEARCH box, to select payment_group.billing_address(a b2b/billing_address)
+  I want a INPUT box, to directly input payment_group.version(a common/integer)
   I want submit and cancel functionality in this page for all fields
 
-=====web console create page for b2b/credit_account=====
-  I want a LABEL, only show value of credit_account.id(a common/string)
-  I want a INPUT box, to directly input credit_account.name(a common/string)
-  I want a SEARCH box, to select credit_account.buyer(a b2b/buyer_company)
-  I want a SEARCH box, to select credit_account.seller(a b2b/seller_company)
-  I want a INPUT box, to directly input credit_account.authorized(a common/float)
-  I want a INPUT box, to directly input credit_account.remain(a common/float)
-  I want a INPUT box, to directly input credit_account.version(a common/integer)
+=====web console create page for b2b/fix_rice_sku_promotion=====
+  I want a LABEL, only show value of fix_rice_sku_promotion.id(a common/string)
+  I want a SEARCH box, to select fix_rice_sku_promotion.sku(a b2b/sku)
+  I want a INPUT box, to directly input fix_rice_sku_promotion.rules(a common/string)
+  I want a INPUT box, to directly input fix_rice_sku_promotion.price_to(a common/float)
+  I want a INPUT box, to directly input fix_rice_sku_promotion.version(a common/integer)
   I want submit and cancel functionality in this page for all fields
 
-=====web console create page for b2b/confirmation=====
-  I want a LABEL, only show value of confirmation.id(a common/string)
-  I want a INPUT box, to directly input confirmation.who(a common/string)
-  I want a INPUT box, to directly input confirmation.confirm_time(a common/date)
-  I want a INPUT box, to directly input confirmation.version(a common/integer)
-  I want a SEARCH box, to select confirmation.OrderList(a b2b/order)
+=====web console create page for b2b/universal_price_review=====
+  I want a LABEL, only show value of universal_price_review.id(a common/string)
+  I want a INPUT box, to directly input universal_price_review.who(a common/string)
+  I want a INPUT box, to directly input universal_price_review.review_time(a common/date)
+  I want a INPUT box, to directly input universal_price_review.remark(a common/string)
+  I want a INPUT box, to directly input universal_price_review.version(a common/integer)
   I want submit and cancel functionality in this page for all fields
 
-=====web console create page for b2b/universal_price=====
-  I want a LABEL, only show value of universal_price.id(a common/string)
-  I want a SEARCH box, to select universal_price.sku(a b2b/sku)
-  I want a INPUT box, to directly input universal_price.price(a common/integer)
-  I want a INPUT box, to directly input universal_price.version(a common/integer)
+=====web console create page for b2b/header=====
+  I want a LABEL, only show value of header.id(a common/string)
+  I want a SEARCH box, to select header.page(a b2b/home_page)
+  I want a INPUT box, to directly input header.image(a common/image)
+  I want a INPUT box, to directly input header.action(a common/string)
+  I want a INPUT box, to directly input header.version(a common/integer)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/contract_price_approval=====
+  I want a LABEL, only show value of contract_price_approval.id(a common/string)
+  I want a INPUT box, to directly input contract_price_approval.who(a common/string)
+  I want a INPUT box, to directly input contract_price_approval.approve_time(a common/date)
+  I want a INPUT box, to directly input contract_price_approval.remark(a common/string)
+  I want a INPUT box, to directly input contract_price_approval.version(a common/integer)
+  I want a SEARCH box, to select contract_price_approval.ContractPriceList(a b2b/contract_price)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/footer=====
+  I want a LABEL, only show value of footer.id(a common/string)
+  I want a SEARCH box, to select footer.page(a b2b/home_page)
+  I want a INPUT box, to directly input footer.image(a common/image)
+  I want a INPUT box, to directly input footer.action(a common/string)
+  I want a INPUT box, to directly input footer.version(a common/integer)
   I want submit and cancel functionality in this page for all fields
 
 =====web console create page for b2b/navi=====
@@ -304,21 +142,42 @@
   I want a INPUT box, to directly input navi.version(a common/integer)
   I want submit and cancel functionality in this page for all fields
 
-=====web console create page for b2b/marketing_landing=====
-  I want a LABEL, only show value of marketing_landing.id(a common/string)
-  I want a INPUT box, to directly input marketing_landing.title(a common/string)
-  I want a INPUT box, to directly input marketing_landing.version(a common/integer)
-  I want a SEARCH box, to select marketing_landing.SellerSiteList(a b2b/seller_site)
-  I want a SEARCH box, to select marketing_landing.MarketingBannerList(a b2b/marketing_banner)
+=====web console create page for b2b/access=====
+  I want a LABEL, only show value of access.id(a common/string)
+  I want a INPUT box, to directly input access.role_name(a common/string)
+  I want a SEARCH box, to select access.role(a b2b/role)
+  I want a INPUT box, to directly input access.version(a common/integer)
+  I want a SEARCH box, to select access.AssignmentList(a b2b/assignment)
   I want submit and cancel functionality in this page for all fields
 
-=====web console create page for b2b/warehouse=====
-  I want a LABEL, only show value of warehouse.id(a common/string)
-  I want a INPUT box, to directly input warehouse.display_name(a common/string)
-  I want a INPUT box, to directly input warehouse.location(a common/string)
-  I want a INPUT box, to directly input warehouse.owner(a common/email)
-  I want a INPUT box, to directly input warehouse.version(a common/integer)
-  I want a SEARCH box, to select warehouse.InventoryList(a b2b/inventory)
+=====web console create page for b2b/inventory=====
+  I want a LABEL, only show value of inventory.id(a common/string)
+  I want a SEARCH box, to select inventory.sku(a b2b/sku)
+  I want a SEARCH box, to select inventory.warehouse(a b2b/warehouse)
+  I want a INPUT box, to directly input inventory.stock_level(a common/integer)
+  I want a INPUT box, to directly input inventory.preorderable(a common/integer)
+  I want a INPUT box, to directly input inventory.backorderable(a common/integer)
+  I want a INPUT box, to directly input inventory.version(a common/integer)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/shipping_address=====
+  I want a LABEL, only show value of shipping_address.id(a common/string)
+  I want a INPUT box, to directly input shipping_address.line1(a common/string)
+  I want a INPUT box, to directly input shipping_address.line2(a common/string)
+  I want a INPUT box, to directly input shipping_address.city(a common/string)
+  I want a INPUT box, to directly input shipping_address.state(a common/string)
+  I want a INPUT box, to directly input shipping_address.country(a common/string)
+  I want a INPUT box, to directly input shipping_address.version(a common/integer)
+  I want a SEARCH box, to select shipping_address.ShippingGroupList(a b2b/shipping_group)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/recurring_info=====
+  I want a LABEL, only show value of recurring_info.id(a common/string)
+  I want a INPUT box, to directly input recurring_info.name(a common/string)
+  I want a INPUT box, to directly input recurring_info.next_time(a common/date)
+  I want a INPUT box, to directly input recurring_info.cron_expr(a common/string)
+  I want a INPUT box, to directly input recurring_info.version(a common/integer)
+  I want a SEARCH box, to select recurring_info.OrderList(a b2b/order)
   I want submit and cancel functionality in this page for all fields
 
 =====web console create page for b2b/order=====
@@ -344,12 +203,54 @@
   I want a SEARCH box, to select order.ActionList(a b2b/action)
   I want submit and cancel functionality in this page for all fields
 
-=====web console create page for b2b/level_two_cat=====
-  I want a LABEL, only show value of level_two_cat.id(a common/string)
-  I want a SEARCH box, to select level_two_cat.parent_cat(a b2b/level_one_cat)
-  I want a INPUT box, to directly input level_two_cat.display_name(a common/string)
-  I want a INPUT box, to directly input level_two_cat.version(a common/integer)
-  I want a SEARCH box, to select level_two_cat.LevelThreeCatList(a b2b/level_three_cat)
+=====web console create page for b2b/role=====
+  I want a LABEL, only show value of role.id(a common/string)
+  I want a INPUT box, to directly input role.role_name(a common/string)
+  I want a INPUT box, to directly input role.version(a common/integer)
+  I want a SEARCH box, to select role.AccessList(a b2b/access)
+  I want a SEARCH box, to select role.CustSvcRepList(a b2b/cust_svc_rep)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/cost_center=====
+  I want a LABEL, only show value of cost_center.id(a common/string)
+  I want a INPUT box, to directly input cost_center.name(a common/string)
+  I want a SEARCH box, to select cost_center.belongs_to(a b2b/buyer_company)
+  I want a INPUT box, to directly input cost_center.password(a common/string)
+  I want a INPUT box, to directly input cost_center.version(a common/integer)
+  I want a SEARCH box, to select cost_center.OrderList(a b2b/order)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/shipping_group=====
+  I want a LABEL, only show value of shipping_group.id(a common/string)
+  I want a INPUT box, to directly input shipping_group.name(a common/string)
+  I want a SEARCH box, to select shipping_group.biz_order(a b2b/order)
+  I want a SEARCH box, to select shipping_group.address(a b2b/shipping_address)
+  I want a INPUT box, to directly input shipping_group.amount(a common/money)
+  I want a INPUT box, to directly input shipping_group.version(a common/integer)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/profit_center=====
+  I want a LABEL, only show value of profit_center.id(a common/string)
+  I want a INPUT box, to directly input profit_center.name(a common/string)
+  I want a SEARCH box, to select profit_center.belongs_to(a b2b/seller_company)
+  I want a INPUT box, to directly input profit_center.version(a common/integer)
+  I want a SEARCH box, to select profit_center.OrderList(a b2b/order)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/shipment=====
+  I want a LABEL, only show value of shipment.id(a common/string)
+  I want a INPUT box, to directly input shipment.who(a common/string)
+  I want a INPUT box, to directly input shipment.ship_time(a common/date)
+  I want a INPUT box, to directly input shipment.version(a common/integer)
+  I want a SEARCH box, to select shipment.OrderList(a b2b/order)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/approval=====
+  I want a LABEL, only show value of approval.id(a common/string)
+  I want a INPUT box, to directly input approval.who(a common/string)
+  I want a INPUT box, to directly input approval.approve_time(a common/date)
+  I want a INPUT box, to directly input approval.version(a common/integer)
+  I want a SEARCH box, to select approval.OrderList(a b2b/order)
   I want submit and cancel functionality in this page for all fields
 
 =====web console create page for b2b/delivery=====
@@ -358,6 +259,28 @@
   I want a INPUT box, to directly input delivery.delivery_time(a common/date)
   I want a INPUT box, to directly input delivery.version(a common/integer)
   I want a SEARCH box, to select delivery.OrderList(a b2b/order)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/level_five_cat=====
+  I want a LABEL, only show value of level_five_cat.id(a common/string)
+  I want a SEARCH box, to select level_five_cat.parent_cat(a b2b/level_four_cat)
+  I want a INPUT box, to directly input level_five_cat.display_name(a common/string)
+  I want a INPUT box, to directly input level_five_cat.version(a common/integer)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/marketing_landing=====
+  I want a LABEL, only show value of marketing_landing.id(a common/string)
+  I want a INPUT box, to directly input marketing_landing.title(a common/string)
+  I want a INPUT box, to directly input marketing_landing.version(a common/integer)
+  I want a SEARCH box, to select marketing_landing.SellerSiteList(a b2b/seller_site)
+  I want a SEARCH box, to select marketing_landing.MarketingBannerList(a b2b/marketing_banner)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/universal_price=====
+  I want a LABEL, only show value of universal_price.id(a common/string)
+  I want a SEARCH box, to select universal_price.sku(a b2b/sku)
+  I want a INPUT box, to directly input universal_price.price(a common/integer)
+  I want a INPUT box, to directly input universal_price.version(a common/integer)
   I want submit and cancel functionality in this page for all fields
 
 =====web console create page for b2b/billing_address=====
@@ -370,24 +293,6 @@
   I want a INPUT box, to directly input billing_address.country(a common/string)
   I want a INPUT box, to directly input billing_address.version(a common/integer)
   I want a SEARCH box, to select billing_address.PaymentGroupList(a b2b/payment_group)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/contract_price_approval=====
-  I want a LABEL, only show value of contract_price_approval.id(a common/string)
-  I want a INPUT box, to directly input contract_price_approval.who(a common/string)
-  I want a INPUT box, to directly input contract_price_approval.approve_time(a common/date)
-  I want a INPUT box, to directly input contract_price_approval.remark(a common/string)
-  I want a INPUT box, to directly input contract_price_approval.version(a common/integer)
-  I want a SEARCH box, to select contract_price_approval.ContractPriceList(a b2b/contract_price)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/payment_group=====
-  I want a LABEL, only show value of payment_group.id(a common/string)
-  I want a INPUT box, to directly input payment_group.name(a common/string)
-  I want a SEARCH box, to select payment_group.biz_order(a b2b/order)
-  I want a INPUT box, to directly input payment_group.card_number(a common/string)
-  I want a SEARCH box, to select payment_group.billing_address(a b2b/billing_address)
-  I want a INPUT box, to directly input payment_group.version(a common/integer)
   I want submit and cancel functionality in this page for all fields
 
 =====web console create page for b2b/buyer_company=====
@@ -406,47 +311,16 @@
   I want a SEARCH box, to select buyer_company.OrderList(a b2b/order)
   I want submit and cancel functionality in this page for all fields
 
-=====web console create page for b2b/marketing_banner=====
-  I want a LABEL, only show value of marketing_banner.id(a common/string)
-  I want a SEARCH box, to select marketing_banner.parent(a b2b/marketing_landing)
-  I want a INPUT box, to directly input marketing_banner.image(a common/image)
-  I want a INPUT box, to directly input marketing_banner.link(a common/string)
-  I want a INPUT box, to directly input marketing_banner.version(a common/integer)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/header=====
-  I want a LABEL, only show value of header.id(a common/string)
-  I want a SEARCH box, to select header.page(a b2b/home_page)
-  I want a INPUT box, to directly input header.image(a common/image)
-  I want a INPUT box, to directly input header.action(a common/string)
-  I want a INPUT box, to directly input header.version(a common/integer)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/cost_center=====
-  I want a LABEL, only show value of cost_center.id(a common/string)
-  I want a INPUT box, to directly input cost_center.name(a common/string)
-  I want a SEARCH box, to select cost_center.belongs_to(a b2b/buyer_company)
-  I want a INPUT box, to directly input cost_center.password(a common/string)
-  I want a INPUT box, to directly input cost_center.version(a common/integer)
-  I want a SEARCH box, to select cost_center.OrderList(a b2b/order)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/universal_price_approval=====
-  I want a LABEL, only show value of universal_price_approval.id(a common/string)
-  I want a INPUT box, to directly input universal_price_approval.who(a common/string)
-  I want a INPUT box, to directly input universal_price_approval.approve_time(a common/date)
-  I want a INPUT box, to directly input universal_price_approval.remark(a common/string)
-  I want a INPUT box, to directly input universal_price_approval.version(a common/integer)
-  I want submit and cancel functionality in this page for all fields
-
-=====web console create page for b2b/contract_price=====
-  I want a LABEL, only show value of contract_price.id(a common/string)
-  I want a INPUT box, to directly input contract_price.contract_id(a common/string)
-  I want a SEARCH box, to select contract_price.sku(a b2b/sku)
-  I want a INPUT box, to directly input contract_price.price(a common/integer)
-  I want a SEARCH box, to select contract_price.review(a b2b/contract_price_review)
-  I want a SEARCH box, to select contract_price.approval(a b2b/contract_price_approval)
-  I want a INPUT box, to directly input contract_price.version(a common/integer)
+=====web console create page for b2b/home_page=====
+  I want a LABEL, only show value of home_page.id(a common/string)
+  I want a INPUT box, to directly input home_page.title(a common/string)
+  I want a INPUT box, to directly input home_page.ver(a common/string)
+  I want a INPUT box, to directly input home_page.version(a common/integer)
+  I want a SEARCH box, to select home_page.SellerSiteList(a b2b/seller_site)
+  I want a SEARCH box, to select home_page.HeaderList(a b2b/header)
+  I want a SEARCH box, to select home_page.NaviList(a b2b/navi)
+  I want a SEARCH box, to select home_page.BannerList(a b2b/banner)
+  I want a SEARCH box, to select home_page.FooterList(a b2b/footer)
   I want submit and cancel functionality in this page for all fields
 
 =====web console create page for b2b/employee=====
@@ -460,10 +334,136 @@
   I want a SEARCH box, to select employee.AssignmentList(a b2b/assignment)
   I want submit and cancel functionality in this page for all fields
 
-=====web console create page for b2b/level_five_cat=====
-  I want a LABEL, only show value of level_five_cat.id(a common/string)
-  I want a SEARCH box, to select level_five_cat.parent_cat(a b2b/level_four_cat)
-  I want a INPUT box, to directly input level_five_cat.display_name(a common/string)
-  I want a INPUT box, to directly input level_five_cat.version(a common/integer)
+=====web console create page for b2b/universal_price_approval=====
+  I want a LABEL, only show value of universal_price_approval.id(a common/string)
+  I want a INPUT box, to directly input universal_price_approval.who(a common/string)
+  I want a INPUT box, to directly input universal_price_approval.approve_time(a common/date)
+  I want a INPUT box, to directly input universal_price_approval.remark(a common/string)
+  I want a INPUT box, to directly input universal_price_approval.version(a common/integer)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/contract_price_review=====
+  I want a LABEL, only show value of contract_price_review.id(a common/string)
+  I want a INPUT box, to directly input contract_price_review.who(a common/string)
+  I want a INPUT box, to directly input contract_price_review.review_time(a common/date)
+  I want a INPUT box, to directly input contract_price_review.remark(a common/string)
+  I want a INPUT box, to directly input contract_price_review.version(a common/integer)
+  I want a SEARCH box, to select contract_price_review.ContractPriceList(a b2b/contract_price)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/processing=====
+  I want a LABEL, only show value of processing.id(a common/string)
+  I want a INPUT box, to directly input processing.who(a common/string)
+  I want a INPUT box, to directly input processing.process_time(a common/date)
+  I want a INPUT box, to directly input processing.version(a common/integer)
+  I want a SEARCH box, to select processing.OrderList(a b2b/order)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/seller_site=====
+  I want a LABEL, only show value of seller_site.id(a common/string)
+  I want a INPUT box, to directly input seller_site.site_id(a common/string)
+  I want a SEARCH box, to select seller_site.home_page(a b2b/home_page)
+  I want a SEARCH box, to select seller_site.catalog(a b2b/catalog)
+  I want a SEARCH box, to select seller_site.marketing(a b2b/marketing_landing)
+  I want a INPUT box, to directly input seller_site.version(a common/integer)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/action=====
+  I want a LABEL, only show value of action.id(a common/string)
+  I want a INPUT box, to directly input action.name(a common/string)
+  I want a INPUT box, to directly input action.internal_name(a common/string)
+  I want a SEARCH box, to select action.bo(a b2b/order)
+  I want a INPUT box, to directly input action.version(a common/integer)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/confirmation=====
+  I want a LABEL, only show value of confirmation.id(a common/string)
+  I want a INPUT box, to directly input confirmation.who(a common/string)
+  I want a INPUT box, to directly input confirmation.confirm_time(a common/date)
+  I want a INPUT box, to directly input confirmation.version(a common/integer)
+  I want a SEARCH box, to select confirmation.OrderList(a b2b/order)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/level_n_cat=====
+  I want a LABEL, only show value of level_n_cat.id(a common/string)
+  I want a SEARCH box, to select level_n_cat.parent_cat(a b2b/level_three_cat)
+  I want a INPUT box, to directly input level_n_cat.display_name(a common/string)
+  I want a INPUT box, to directly input level_n_cat.version(a common/integer)
+  I want a SEARCH box, to select level_n_cat.ProductList(a b2b/product)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/level_four_cat=====
+  I want a LABEL, only show value of level_four_cat.id(a common/string)
+  I want a SEARCH box, to select level_four_cat.parent_cat(a b2b/level_three_cat)
+  I want a INPUT box, to directly input level_four_cat.display_name(a common/string)
+  I want a INPUT box, to directly input level_four_cat.version(a common/integer)
+  I want a SEARCH box, to select level_four_cat.LevelFiveCatList(a b2b/level_five_cat)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/warehouse=====
+  I want a LABEL, only show value of warehouse.id(a common/string)
+  I want a INPUT box, to directly input warehouse.display_name(a common/string)
+  I want a INPUT box, to directly input warehouse.location(a common/string)
+  I want a INPUT box, to directly input warehouse.owner(a common/email)
+  I want a INPUT box, to directly input warehouse.version(a common/integer)
+  I want a SEARCH box, to select warehouse.InventoryList(a b2b/inventory)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/seller_company=====
+  I want a LABEL, only show value of seller_company.id(a common/string)
+  I want a INPUT box, to directly input seller_company.name(a common/string)
+  I want a INPUT box, to directly input seller_company.owner(a common/email)
+  I want a INPUT box, to directly input seller_company.logo(a common/image)
+  I want a INPUT box, to directly input seller_company.contract_text(a common/document)
+  I want a INPUT box, to directly input seller_company.version(a common/integer)
+  I want a SEARCH box, to select seller_company.ProfitCenterList(a b2b/profit_center)
+  I want a SEARCH box, to select seller_company.CreditAccountList(a b2b/credit_account)
+  I want a SEARCH box, to select seller_company.OrderList(a b2b/order)
+  I want a SEARCH box, to select seller_company.CustSvcRepList(a b2b/cust_svc_rep)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/level_three_cat=====
+  I want a LABEL, only show value of level_three_cat.id(a common/string)
+  I want a SEARCH box, to select level_three_cat.parent_cat(a b2b/level_two_cat)
+  I want a INPUT box, to directly input level_three_cat.display_name(a common/string)
+  I want a INPUT box, to directly input level_three_cat.version(a common/integer)
+  I want a SEARCH box, to select level_three_cat.LevelFourCatList(a b2b/level_four_cat)
+  I want a SEARCH box, to select level_three_cat.LevelNCatList(a b2b/level_n_cat)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/credit_account=====
+  I want a LABEL, only show value of credit_account.id(a common/string)
+  I want a INPUT box, to directly input credit_account.name(a common/string)
+  I want a SEARCH box, to select credit_account.buyer(a b2b/buyer_company)
+  I want a SEARCH box, to select credit_account.seller(a b2b/seller_company)
+  I want a INPUT box, to directly input credit_account.authorized(a common/float)
+  I want a INPUT box, to directly input credit_account.remain(a common/float)
+  I want a INPUT box, to directly input credit_account.version(a common/integer)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/brand=====
+  I want a LABEL, only show value of brand.id(a common/string)
+  I want a INPUT box, to directly input brand.brand_name(a common/string)
+  I want a INPUT box, to directly input brand.logo(a common/image)
+  I want a INPUT box, to directly input brand.remark(a common/string)
+  I want a INPUT box, to directly input brand.version(a common/integer)
+  I want a SEARCH box, to select brand.ProductList(a b2b/product)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/catalog=====
+  I want a LABEL, only show value of catalog.id(a common/string)
+  I want a INPUT box, to directly input catalog.display_name(a common/string)
+  I want a INPUT box, to directly input catalog.seller_id(a common/string)
+  I want a INPUT box, to directly input catalog.version(a common/integer)
+  I want a SEARCH box, to select catalog.SellerSiteList(a b2b/seller_site)
+  I want a SEARCH box, to select catalog.LevelOneCatList(a b2b/level_one_cat)
+  I want submit and cancel functionality in this page for all fields
+
+=====web console create page for b2b/level_one_cat=====
+  I want a LABEL, only show value of level_one_cat.id(a common/string)
+  I want a SEARCH box, to select level_one_cat.catalog(a b2b/catalog)
+  I want a INPUT box, to directly input level_one_cat.display_name(a common/string)
+  I want a INPUT box, to directly input level_one_cat.version(a common/integer)
+  I want a SEARCH box, to select level_one_cat.LevelTwoCatList(a b2b/level_two_cat)
   I want submit and cancel functionality in this page for all fields
 

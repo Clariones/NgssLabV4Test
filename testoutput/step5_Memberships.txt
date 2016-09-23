@@ -1,38 +1,25 @@
+LogicalUnit b2b/banner memberships: 5
+    [system_generated_id] has a b2b/banner_id
+    [normal] has a b2b/home_page
+    [normal] has a b2b/banner_image
+    [normal] has a b2b/banner_action
+    [normal] has a b2b/banner_version
+
+LogicalUnit b2b/contract_price memberships: 7
+    [system_generated_id] has a b2b/contract_price_id
+    [normal] has a b2b/contract_price_contract_id
+    [normal] has a b2b/sku
+    [normal] has a b2b/contract_price_price
+    [system_filled] has a b2b/contract_price_review
+    [system_filled] has a b2b/contract_price_approval
+    [normal] has a b2b/contract_price_version
+
 LogicalUnit b2b/assignment memberships: 5
     [system_generated_id] has a b2b/assignment_id
     [normal] has a b2b/employee
     [normal] has a b2b/access
     [normal] has a b2b/assignment_assigned_date
     [normal] has a b2b/assignment_version
-
-LogicalUnit b2b/footer memberships: 5
-    [system_generated_id] has a b2b/footer_id
-    [normal] has a b2b/home_page
-    [normal] has a b2b/footer_image
-    [normal] has a b2b/footer_action
-    [normal] has a b2b/footer_version
-
-LogicalUnit b2b/level_four_cat memberships: 5
-    [system_generated_id] has a b2b/level_four_cat_id
-    [normal] has a b2b/level_three_cat
-    [normal] has a b2b/level_four_cat_display_name
-    [normal] has a b2b/level_four_cat_version
-    [normal] has a list of b2b/level_five_cat
-
-LogicalUnit b2b/seller_site memberships: 6
-    [system_generated_id] has a b2b/seller_site_id
-    [normal] has a b2b/seller_site_site_id
-    [normal] has a b2b/home_page
-    [normal] has a b2b/catalog
-    [normal] has a b2b/marketing_landing
-    [normal] has a b2b/seller_site_version
-
-LogicalUnit b2b/universal_price_review memberships: 5
-    [system_generated_id] has a b2b/universal_price_review_id
-    [normal] has a b2b/universal_price_review_who
-    [normal] has a b2b/universal_price_review_review_time
-    [normal] has a b2b/universal_price_review_remark
-    [normal] has a b2b/universal_price_review_version
 
 LogicalUnit b2b/line_item memberships: 8
     [system_generated_id] has a b2b/line_item_id
@@ -44,62 +31,6 @@ LogicalUnit b2b/line_item memberships: 8
     [normal] has a b2b/line_item_active
     [normal] has a b2b/line_item_version
 
-LogicalUnit b2b/level_n_cat memberships: 5
-    [system_generated_id] has a b2b/level_n_cat_id
-    [normal] has a b2b/level_three_cat
-    [normal] has a b2b/level_n_cat_display_name
-    [normal] has a b2b/level_n_cat_version
-    [normal] has a list of b2b/product
-
-LogicalUnit b2b/banner memberships: 5
-    [system_generated_id] has a b2b/banner_id
-    [normal] has a b2b/home_page
-    [normal] has a b2b/banner_image
-    [normal] has a b2b/banner_action
-    [normal] has a b2b/banner_version
-
-LogicalUnit b2b/brand memberships: 6
-    [system_generated_id] has a b2b/brand_id
-    [normal] has a b2b/brand_brand_name
-    [normal] has a b2b/brand_logo
-    [normal] has a b2b/brand_remark
-    [normal] has a b2b/brand_version
-    [normal] has a list of b2b/product
-
-LogicalUnit b2b/level_one_cat memberships: 5
-    [system_generated_id] has a b2b/level_one_cat_id
-    [normal] has a b2b/catalog
-    [normal] has a b2b/level_one_cat_display_name
-    [normal] has a b2b/level_one_cat_version
-    [normal] has a list of b2b/level_two_cat
-
-LogicalUnit b2b/processing memberships: 5
-    [system_generated_id] has a b2b/processing_id
-    [normal] has a b2b/processing_who
-    [normal] has a b2b/processing_process_time
-    [normal] has a b2b/processing_version
-    [normal] has a b2b/order
-
-LogicalUnit b2b/contract_price_review memberships: 6
-    [system_generated_id] has a b2b/contract_price_review_id
-    [normal] has a b2b/contract_price_review_who
-    [normal] has a b2b/contract_price_review_review_time
-    [normal] has a b2b/contract_price_review_remark
-    [normal] has a b2b/contract_price_review_version
-    [normal] has a b2b/contract_price
-
-LogicalUnit b2b/seller_company memberships: 10
-    [system_generated_id] has a b2b/seller_company_id
-    [normal] has a b2b/seller_company_name
-    [normal] has a b2b/seller_company_owner
-    [normal] has a b2b/seller_company_logo
-    [normal] has a b2b/seller_company_contract_text
-    [normal] has a b2b/seller_company_version
-    [normal] has a list of b2b/profit_center
-    [normal] has a list of b2b/credit_account
-    [normal] has a list of b2b/order
-    [normal] has a list of b2b/cust_svc_rep
-
 LogicalUnit b2b/cust_svc_rep memberships: 6
     [system_generated_id] has a b2b/cust_svc_rep_id
     [normal] has a b2b/cust_svc_rep_email
@@ -108,102 +39,12 @@ LogicalUnit b2b/cust_svc_rep memberships: 6
     [normal] has a b2b/seller_company
     [normal] has a b2b/cust_svc_rep_version
 
-LogicalUnit b2b/level_three_cat memberships: 6
-    [system_generated_id] has a b2b/level_three_cat_id
-    [normal] has a b2b/level_two_cat
-    [normal] has a b2b/level_three_cat_display_name
-    [normal] has a b2b/level_three_cat_version
-    [normal] has a list of b2b/level_four_cat
-    [normal] has a list of b2b/level_n_cat
-
-LogicalUnit b2b/access memberships: 5
-    [system_generated_id] has a b2b/access_id
-    [normal] has a b2b/access_role_name
-    [normal] has a b2b/role
-    [normal] has a b2b/access_version
-    [normal] has a list of b2b/assignment
-
-LogicalUnit b2b/fix_rice_sku_promotion memberships: 5
-    [system_generated_id] has a b2b/fix_rice_sku_promotion_id
-    [normal] has a b2b/sku
-    [normal] has a b2b/fix_rice_sku_promotion_rules
-    [normal] has a b2b/fix_rice_sku_promotion_price_to
-    [normal] has a b2b/fix_rice_sku_promotion_version
-
-LogicalUnit b2b/action memberships: 5
-    [system_generated_id] has a b2b/action_id
-    [normal] has a b2b/action_name
-    [normal] has a b2b/action_internal_name
-    [normal] has a b2b/order
-    [normal] has a b2b/action_version
-
-LogicalUnit b2b/profit_center memberships: 5
-    [system_generated_id] has a b2b/profit_center_id
-    [normal] has a b2b/profit_center_name
-    [normal] has a b2b/seller_company
-    [normal] has a b2b/profit_center_version
-    [normal] has a list of b2b/order
-
-LogicalUnit b2b/approval memberships: 5
-    [system_generated_id] has a b2b/approval_id
-    [normal] has a b2b/approval_who
-    [normal] has a b2b/approval_approve_time
-    [normal] has a b2b/approval_version
-    [normal] has a b2b/order
-
-LogicalUnit b2b/inventory memberships: 7
-    [system_generated_id] has a b2b/inventory_id
-    [normal] has a b2b/sku
-    [normal] has a b2b/warehouse
-    [normal] has a b2b/inventory_stock_level
-    [normal] has a b2b/inventory_preorderable
-    [normal] has a b2b/inventory_backorderable
-    [normal] has a b2b/inventory_version
-
-LogicalUnit b2b/home_page memberships: 9
-    [system_generated_id] has a b2b/home_page_id
-    [normal] has a b2b/home_page_title
-    [normal] has a b2b/home_page_ver
-    [normal] has a b2b/home_page_version
-    [normal] has a list of b2b/seller_site
-    [normal] has a list of b2b/header
-    [normal] has a list of b2b/navi
-    [normal] has a list of b2b/banner
-    [normal] has a list of b2b/footer
-
-LogicalUnit b2b/role memberships: 5
-    [system_generated_id] has a b2b/role_id
-    [normal] has a b2b/role_role_name
-    [normal] has a b2b/role_version
-    [normal] has a list of b2b/access
-    [normal] has a list of b2b/cust_svc_rep
-
-LogicalUnit b2b/shipment memberships: 5
-    [system_generated_id] has a b2b/shipment_id
-    [normal] has a b2b/shipment_who
-    [normal] has a b2b/shipment_ship_time
-    [normal] has a b2b/shipment_version
-    [normal] has a b2b/order
-
-LogicalUnit b2b/product memberships: 8
-    [system_generated_id] has a b2b/product_id
-    [normal] has a b2b/product_display_name
-    [normal] has a b2b/level_n_cat
-    [normal] has a b2b/brand
-    [normal] has a b2b/product_origin
-    [normal] has a b2b/product_remark
-    [normal] has a b2b/product_version
-    [normal] has a list of b2b/sku
-
-LogicalUnit b2b/shipping_address memberships: 8
-    [system_generated_id] has a b2b/shipping_address_id
-    [normal] has a b2b/shipping_address_line1
-    [normal] has a b2b/shipping_address_line2
-    [normal] has a b2b/shipping_address_city
-    [normal] has a b2b/shipping_address_state
-    [normal] has a b2b/shipping_address_country
-    [normal] has a b2b/shipping_address_version
-    [normal] has a list of b2b/shipping_group
+LogicalUnit b2b/marketing_banner memberships: 5
+    [system_generated_id] has a b2b/marketing_banner_id
+    [normal] has a b2b/marketing_landing
+    [normal] has a b2b/marketing_banner_image
+    [normal] has a b2b/marketing_banner_link
+    [normal] has a b2b/marketing_banner_version
 
 LogicalUnit b2b/sku memberships: 10
     [system_generated_id] has a b2b/sku_id
@@ -217,51 +58,66 @@ LogicalUnit b2b/sku memberships: 10
     [normal] has a list of b2b/fix_rice_sku_promotion
     [normal] has a list of b2b/inventory
 
-LogicalUnit b2b/shipping_group memberships: 6
-    [system_generated_id] has a b2b/shipping_group_id
-    [normal] has a b2b/shipping_group_name
+LogicalUnit b2b/level_two_cat memberships: 5
+    [system_generated_id] has a b2b/level_two_cat_id
+    [normal] has a b2b/level_one_cat
+    [normal] has a b2b/level_two_cat_display_name
+    [normal] has a b2b/level_two_cat_version
+    [normal] has a list of b2b/level_three_cat
+
+LogicalUnit b2b/product memberships: 8
+    [system_generated_id] has a b2b/product_id
+    [normal] has a b2b/product_display_name
+    [normal] has a b2b/level_n_cat
+    [normal] has a b2b/brand
+    [normal] has a b2b/product_origin
+    [normal] has a b2b/product_remark
+    [normal] has a b2b/product_version
+    [normal] has a list of b2b/sku
+
+LogicalUnit b2b/payment_group memberships: 6
+    [system_generated_id] has a b2b/payment_group_id
+    [normal] has a b2b/payment_group_name
     [normal] has a b2b/order
-    [normal] has a b2b/shipping_address
-    [normal] has a b2b/shipping_group_amount
-    [normal] has a b2b/shipping_group_version
+    [normal] has a b2b/payment_group_card_number
+    [normal] has a b2b/billing_address
+    [normal] has a b2b/payment_group_version
 
-LogicalUnit b2b/recurring_info memberships: 6
-    [system_generated_id] has a b2b/recurring_info_id
-    [normal] has a b2b/recurring_info_name
-    [normal] has a b2b/recurring_info_next_time
-    [normal] has a b2b/recurring_info_cron_expr
-    [normal] has a b2b/recurring_info_version
-    [normal] has a list of b2b/order
-
-LogicalUnit b2b/catalog memberships: 6
-    [system_generated_id] has a b2b/catalog_id
-    [normal] has a b2b/catalog_display_name
-    [normal] has a b2b/catalog_seller_id
-    [normal] has a b2b/catalog_version
-    [normal] has a list of b2b/seller_site
-    [normal] has a list of b2b/level_one_cat
-
-LogicalUnit b2b/credit_account memberships: 7
-    [system_generated_id] has a b2b/credit_account_id
-    [normal] has a b2b/credit_account_name
-    [normal] has a b2b/buyer_company
-    [normal] has a b2b/seller_company
-    [normal] has a b2b/credit_account_authorized
-    [normal] has a b2b/credit_account_remain
-    [normal] has a b2b/credit_account_version
-
-LogicalUnit b2b/confirmation memberships: 5
-    [system_generated_id] has a b2b/confirmation_id
-    [normal] has a b2b/confirmation_who
-    [normal] has a b2b/confirmation_confirm_time
-    [normal] has a b2b/confirmation_version
-    [normal] has a b2b/order
-
-LogicalUnit b2b/universal_price memberships: 4
-    [system_generated_id] has a b2b/universal_price_id
+LogicalUnit b2b/fix_rice_sku_promotion memberships: 5
+    [system_generated_id] has a b2b/fix_rice_sku_promotion_id
     [normal] has a b2b/sku
-    [normal] has a b2b/universal_price_price
-    [normal] has a b2b/universal_price_version
+    [normal] has a b2b/fix_rice_sku_promotion_rules
+    [normal] has a b2b/fix_rice_sku_promotion_price_to
+    [normal] has a b2b/fix_rice_sku_promotion_version
+
+LogicalUnit b2b/universal_price_review memberships: 5
+    [system_generated_id] has a b2b/universal_price_review_id
+    [normal] has a b2b/universal_price_review_who
+    [normal] has a b2b/universal_price_review_review_time
+    [normal] has a b2b/universal_price_review_remark
+    [normal] has a b2b/universal_price_review_version
+
+LogicalUnit b2b/header memberships: 5
+    [system_generated_id] has a b2b/header_id
+    [normal] has a b2b/home_page
+    [normal] has a b2b/header_image
+    [normal] has a b2b/header_action
+    [normal] has a b2b/header_version
+
+LogicalUnit b2b/contract_price_approval memberships: 6
+    [system_generated_id] has a b2b/contract_price_approval_id
+    [normal] has a b2b/contract_price_approval_who
+    [normal] has a b2b/contract_price_approval_approve_time
+    [normal] has a b2b/contract_price_approval_remark
+    [normal] has a b2b/contract_price_approval_version
+    [normal] has a b2b/contract_price
+
+LogicalUnit b2b/footer memberships: 5
+    [system_generated_id] has a b2b/footer_id
+    [normal] has a b2b/home_page
+    [normal] has a b2b/footer_image
+    [normal] has a b2b/footer_action
+    [normal] has a b2b/footer_version
 
 LogicalUnit b2b/navi memberships: 5
     [system_generated_id] has a b2b/navi_id
@@ -270,20 +126,39 @@ LogicalUnit b2b/navi memberships: 5
     [normal] has a b2b/navi_action
     [normal] has a b2b/navi_version
 
-LogicalUnit b2b/marketing_landing memberships: 5
-    [system_generated_id] has a b2b/marketing_landing_id
-    [normal] has a b2b/marketing_landing_title
-    [normal] has a b2b/marketing_landing_version
-    [normal] has a list of b2b/seller_site
-    [normal] has a list of b2b/marketing_banner
+LogicalUnit b2b/access memberships: 5
+    [system_generated_id] has a b2b/access_id
+    [normal] has a b2b/access_role_name
+    [normal] has a b2b/role
+    [normal] has a b2b/access_version
+    [normal] has a list of b2b/assignment
 
-LogicalUnit b2b/warehouse memberships: 6
-    [system_generated_id] has a b2b/warehouse_id
-    [normal] has a b2b/warehouse_display_name
-    [normal] has a b2b/warehouse_location
-    [normal] has a b2b/warehouse_owner
-    [normal] has a b2b/warehouse_version
-    [normal] has a list of b2b/inventory
+LogicalUnit b2b/inventory memberships: 7
+    [system_generated_id] has a b2b/inventory_id
+    [normal] has a b2b/sku
+    [normal] has a b2b/warehouse
+    [normal] has a b2b/inventory_stock_level
+    [normal] has a b2b/inventory_preorderable
+    [normal] has a b2b/inventory_backorderable
+    [normal] has a b2b/inventory_version
+
+LogicalUnit b2b/shipping_address memberships: 8
+    [system_generated_id] has a b2b/shipping_address_id
+    [normal] has a b2b/shipping_address_line1
+    [normal] has a b2b/shipping_address_line2
+    [normal] has a b2b/shipping_address_city
+    [normal] has a b2b/shipping_address_state
+    [normal] has a b2b/shipping_address_country
+    [normal] has a b2b/shipping_address_version
+    [normal] has a list of b2b/shipping_group
+
+LogicalUnit b2b/recurring_info memberships: 6
+    [system_generated_id] has a b2b/recurring_info_id
+    [normal] has a b2b/recurring_info_name
+    [normal] has a b2b/recurring_info_next_time
+    [normal] has a b2b/recurring_info_cron_expr
+    [normal] has a b2b/recurring_info_version
+    [normal] has a list of b2b/order
 
 LogicalUnit b2b/order memberships: 20
     [system_generated_id] has a b2b/order_id
@@ -307,12 +182,49 @@ LogicalUnit b2b/order memberships: 20
     [normal] has a list of b2b/payment_group
     [normal] has a list of b2b/action
 
-LogicalUnit b2b/level_two_cat memberships: 5
-    [system_generated_id] has a b2b/level_two_cat_id
-    [normal] has a b2b/level_one_cat
-    [normal] has a b2b/level_two_cat_display_name
-    [normal] has a b2b/level_two_cat_version
-    [normal] has a list of b2b/level_three_cat
+LogicalUnit b2b/role memberships: 5
+    [system_generated_id] has a b2b/role_id
+    [normal] has a b2b/role_role_name
+    [normal] has a b2b/role_version
+    [normal] has a list of b2b/access
+    [normal] has a list of b2b/cust_svc_rep
+
+LogicalUnit b2b/cost_center memberships: 6
+    [system_generated_id] has a b2b/cost_center_id
+    [normal] has a b2b/cost_center_name
+    [normal] has a b2b/buyer_company
+    [normal] has a b2b/cost_center_password
+    [normal] has a b2b/cost_center_version
+    [normal] has a list of b2b/order
+
+LogicalUnit b2b/shipping_group memberships: 6
+    [system_generated_id] has a b2b/shipping_group_id
+    [normal] has a b2b/shipping_group_name
+    [normal] has a b2b/order
+    [normal] has a b2b/shipping_address
+    [normal] has a b2b/shipping_group_amount
+    [normal] has a b2b/shipping_group_version
+
+LogicalUnit b2b/profit_center memberships: 5
+    [system_generated_id] has a b2b/profit_center_id
+    [normal] has a b2b/profit_center_name
+    [normal] has a b2b/seller_company
+    [normal] has a b2b/profit_center_version
+    [normal] has a list of b2b/order
+
+LogicalUnit b2b/shipment memberships: 5
+    [system_generated_id] has a b2b/shipment_id
+    [normal] has a b2b/shipment_who
+    [normal] has a b2b/shipment_ship_time
+    [normal] has a b2b/shipment_version
+    [normal] has a b2b/order
+
+LogicalUnit b2b/approval memberships: 5
+    [system_generated_id] has a b2b/approval_id
+    [normal] has a b2b/approval_who
+    [normal] has a b2b/approval_approve_time
+    [normal] has a b2b/approval_version
+    [normal] has a b2b/order
 
 LogicalUnit b2b/delivery memberships: 5
     [system_generated_id] has a b2b/delivery_id
@@ -320,6 +232,25 @@ LogicalUnit b2b/delivery memberships: 5
     [normal] has a b2b/delivery_delivery_time
     [normal] has a b2b/delivery_version
     [normal] has a b2b/order
+
+LogicalUnit b2b/level_five_cat memberships: 4
+    [system_generated_id] has a b2b/level_five_cat_id
+    [normal] has a b2b/level_four_cat
+    [normal] has a b2b/level_five_cat_display_name
+    [normal] has a b2b/level_five_cat_version
+
+LogicalUnit b2b/marketing_landing memberships: 5
+    [system_generated_id] has a b2b/marketing_landing_id
+    [normal] has a b2b/marketing_landing_title
+    [normal] has a b2b/marketing_landing_version
+    [normal] has a list of b2b/seller_site
+    [normal] has a list of b2b/marketing_banner
+
+LogicalUnit b2b/universal_price memberships: 4
+    [system_generated_id] has a b2b/universal_price_id
+    [normal] has a b2b/sku
+    [normal] has a b2b/universal_price_price
+    [normal] has a b2b/universal_price_version
 
 LogicalUnit b2b/billing_address memberships: 9
     [system_generated_id] has a b2b/billing_address_id
@@ -331,22 +262,6 @@ LogicalUnit b2b/billing_address memberships: 9
     [normal] has a b2b/billing_address_country
     [normal] has a b2b/billing_address_version
     [normal] has a list of b2b/payment_group
-
-LogicalUnit b2b/contract_price_approval memberships: 6
-    [system_generated_id] has a b2b/contract_price_approval_id
-    [normal] has a b2b/contract_price_approval_who
-    [normal] has a b2b/contract_price_approval_approve_time
-    [normal] has a b2b/contract_price_approval_remark
-    [normal] has a b2b/contract_price_approval_version
-    [normal] has a b2b/contract_price
-
-LogicalUnit b2b/payment_group memberships: 6
-    [system_generated_id] has a b2b/payment_group_id
-    [normal] has a b2b/payment_group_name
-    [normal] has a b2b/order
-    [normal] has a b2b/payment_group_card_number
-    [normal] has a b2b/billing_address
-    [normal] has a b2b/payment_group_version
 
 LogicalUnit b2b/buyer_company memberships: 13
     [system_generated_id] has a b2b/buyer_company_id
@@ -363,43 +278,16 @@ LogicalUnit b2b/buyer_company memberships: 13
     [normal] has a list of b2b/employee
     [normal] has a list of b2b/order
 
-LogicalUnit b2b/marketing_banner memberships: 5
-    [system_generated_id] has a b2b/marketing_banner_id
-    [normal] has a b2b/marketing_landing
-    [normal] has a b2b/marketing_banner_image
-    [normal] has a b2b/marketing_banner_link
-    [normal] has a b2b/marketing_banner_version
-
-LogicalUnit b2b/header memberships: 5
-    [system_generated_id] has a b2b/header_id
-    [normal] has a b2b/home_page
-    [normal] has a b2b/header_image
-    [normal] has a b2b/header_action
-    [normal] has a b2b/header_version
-
-LogicalUnit b2b/cost_center memberships: 6
-    [system_generated_id] has a b2b/cost_center_id
-    [normal] has a b2b/cost_center_name
-    [normal] has a b2b/buyer_company
-    [normal] has a b2b/cost_center_password
-    [normal] has a b2b/cost_center_version
-    [normal] has a list of b2b/order
-
-LogicalUnit b2b/universal_price_approval memberships: 5
-    [system_generated_id] has a b2b/universal_price_approval_id
-    [normal] has a b2b/universal_price_approval_who
-    [normal] has a b2b/universal_price_approval_approve_time
-    [normal] has a b2b/universal_price_approval_remark
-    [normal] has a b2b/universal_price_approval_version
-
-LogicalUnit b2b/contract_price memberships: 7
-    [system_generated_id] has a b2b/contract_price_id
-    [normal] has a b2b/contract_price_contract_id
-    [normal] has a b2b/sku
-    [normal] has a b2b/contract_price_price
-    [system_filled] has a b2b/contract_price_review
-    [system_filled] has a b2b/contract_price_approval
-    [normal] has a b2b/contract_price_version
+LogicalUnit b2b/home_page memberships: 9
+    [system_generated_id] has a b2b/home_page_id
+    [normal] has a b2b/home_page_title
+    [normal] has a b2b/home_page_ver
+    [normal] has a b2b/home_page_version
+    [normal] has a list of b2b/seller_site
+    [normal] has a list of b2b/header
+    [normal] has a list of b2b/navi
+    [normal] has a list of b2b/banner
+    [normal] has a list of b2b/footer
 
 LogicalUnit b2b/employee memberships: 8
     [system_generated_id] has a b2b/employee_id
@@ -411,9 +299,121 @@ LogicalUnit b2b/employee memberships: 8
     [normal] has a b2b/employee_version
     [normal] has a list of b2b/assignment
 
-LogicalUnit b2b/level_five_cat memberships: 4
-    [system_generated_id] has a b2b/level_five_cat_id
-    [normal] has a b2b/level_four_cat
-    [normal] has a b2b/level_five_cat_display_name
-    [normal] has a b2b/level_five_cat_version
+LogicalUnit b2b/universal_price_approval memberships: 5
+    [system_generated_id] has a b2b/universal_price_approval_id
+    [normal] has a b2b/universal_price_approval_who
+    [normal] has a b2b/universal_price_approval_approve_time
+    [normal] has a b2b/universal_price_approval_remark
+    [normal] has a b2b/universal_price_approval_version
+
+LogicalUnit b2b/contract_price_review memberships: 6
+    [system_generated_id] has a b2b/contract_price_review_id
+    [normal] has a b2b/contract_price_review_who
+    [normal] has a b2b/contract_price_review_review_time
+    [normal] has a b2b/contract_price_review_remark
+    [normal] has a b2b/contract_price_review_version
+    [normal] has a b2b/contract_price
+
+LogicalUnit b2b/processing memberships: 5
+    [system_generated_id] has a b2b/processing_id
+    [normal] has a b2b/processing_who
+    [normal] has a b2b/processing_process_time
+    [normal] has a b2b/processing_version
+    [normal] has a b2b/order
+
+LogicalUnit b2b/seller_site memberships: 6
+    [system_generated_id] has a b2b/seller_site_id
+    [normal] has a b2b/seller_site_site_id
+    [normal] has a b2b/home_page
+    [normal] has a b2b/catalog
+    [normal] has a b2b/marketing_landing
+    [normal] has a b2b/seller_site_version
+
+LogicalUnit b2b/action memberships: 5
+    [system_generated_id] has a b2b/action_id
+    [normal] has a b2b/action_name
+    [normal] has a b2b/action_internal_name
+    [normal] has a b2b/order
+    [normal] has a b2b/action_version
+
+LogicalUnit b2b/confirmation memberships: 5
+    [system_generated_id] has a b2b/confirmation_id
+    [normal] has a b2b/confirmation_who
+    [normal] has a b2b/confirmation_confirm_time
+    [normal] has a b2b/confirmation_version
+    [normal] has a b2b/order
+
+LogicalUnit b2b/level_n_cat memberships: 5
+    [system_generated_id] has a b2b/level_n_cat_id
+    [normal] has a b2b/level_three_cat
+    [normal] has a b2b/level_n_cat_display_name
+    [normal] has a b2b/level_n_cat_version
+    [normal] has a list of b2b/product
+
+LogicalUnit b2b/level_four_cat memberships: 5
+    [system_generated_id] has a b2b/level_four_cat_id
+    [normal] has a b2b/level_three_cat
+    [normal] has a b2b/level_four_cat_display_name
+    [normal] has a b2b/level_four_cat_version
+    [normal] has a list of b2b/level_five_cat
+
+LogicalUnit b2b/warehouse memberships: 6
+    [system_generated_id] has a b2b/warehouse_id
+    [normal] has a b2b/warehouse_display_name
+    [normal] has a b2b/warehouse_location
+    [normal] has a b2b/warehouse_owner
+    [normal] has a b2b/warehouse_version
+    [normal] has a list of b2b/inventory
+
+LogicalUnit b2b/seller_company memberships: 10
+    [system_generated_id] has a b2b/seller_company_id
+    [normal] has a b2b/seller_company_name
+    [normal] has a b2b/seller_company_owner
+    [normal] has a b2b/seller_company_logo
+    [normal] has a b2b/seller_company_contract_text
+    [normal] has a b2b/seller_company_version
+    [normal] has a list of b2b/profit_center
+    [normal] has a list of b2b/credit_account
+    [normal] has a list of b2b/order
+    [normal] has a list of b2b/cust_svc_rep
+
+LogicalUnit b2b/level_three_cat memberships: 6
+    [system_generated_id] has a b2b/level_three_cat_id
+    [normal] has a b2b/level_two_cat
+    [normal] has a b2b/level_three_cat_display_name
+    [normal] has a b2b/level_three_cat_version
+    [normal] has a list of b2b/level_four_cat
+    [normal] has a list of b2b/level_n_cat
+
+LogicalUnit b2b/credit_account memberships: 7
+    [system_generated_id] has a b2b/credit_account_id
+    [normal] has a b2b/credit_account_name
+    [normal] has a b2b/buyer_company
+    [normal] has a b2b/seller_company
+    [normal] has a b2b/credit_account_authorized
+    [normal] has a b2b/credit_account_remain
+    [normal] has a b2b/credit_account_version
+
+LogicalUnit b2b/brand memberships: 6
+    [system_generated_id] has a b2b/brand_id
+    [normal] has a b2b/brand_brand_name
+    [normal] has a b2b/brand_logo
+    [normal] has a b2b/brand_remark
+    [normal] has a b2b/brand_version
+    [normal] has a list of b2b/product
+
+LogicalUnit b2b/catalog memberships: 6
+    [system_generated_id] has a b2b/catalog_id
+    [normal] has a b2b/catalog_display_name
+    [normal] has a b2b/catalog_seller_id
+    [normal] has a b2b/catalog_version
+    [normal] has a list of b2b/seller_site
+    [normal] has a list of b2b/level_one_cat
+
+LogicalUnit b2b/level_one_cat memberships: 5
+    [system_generated_id] has a b2b/level_one_cat_id
+    [normal] has a b2b/catalog
+    [normal] has a b2b/level_one_cat_display_name
+    [normal] has a b2b/level_one_cat_version
+    [normal] has a list of b2b/level_two_cat
 

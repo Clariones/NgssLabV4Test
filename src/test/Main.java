@@ -58,6 +58,7 @@ public class Main {
 		ArtifactRepository artifactRepo = NgssContext.getArtifactRepository();
 		
 		delivery.offerArtifactType(ArtifactType.frontEnd_webConsole_create_page);
+		delivery.offerArtifactType(ArtifactType.frontEnd_webConsole_detail_page);
 //		delivery.setBUilder
 		return delivery;
 	}

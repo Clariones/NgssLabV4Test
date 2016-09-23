@@ -1,0 +1,426 @@
+=====web console detail page for b2b/assignment=====
+  I want a LABEL, only show value of assignment.id(a common/string)
+  I want a LINK, which can jump to detail page of assignment.user(a b2b/employee)
+  I want a LINK, which can jump to detail page of assignment.access(a b2b/access)
+  I want a LABEL, only show value of assignment.assigned_date(a common/date)
+  I want a LABEL, only show value of assignment.version(a common/integer)
+
+=====web console detail page for b2b/line_item=====
+  I want a LABEL, only show value of line_item.id(a common/string)
+  I want a LINK, which can jump to detail page of line_item.biz_order(a b2b/order)
+  I want a LABEL, only show value of line_item.sku_id(a common/string)
+  I want a LABEL, only show value of line_item.sku_name(a common/string)
+  I want a LABEL, only show value of line_item.amount(a common/money)
+  I want a LABEL, only show value of line_item.quantity(a common/integer)
+  I want a LABEL, only show value of line_item.active(a common/boolean)
+  I want a LABEL, only show value of line_item.version(a common/integer)
+
+=====web console detail page for b2b/cust_svc_rep=====
+  I want a LABEL, only show value of cust_svc_rep.id(a common/string)
+  I want a LABEL, only show value of cust_svc_rep.email(a common/email)
+  I want a LABEL, only show value of cust_svc_rep.passwd(a common/string)
+  I want a LINK, which can jump to detail page of cust_svc_rep.role(a b2b/role)
+  I want a LINK, which can jump to detail page of cust_svc_rep.company(a b2b/seller_company)
+  I want a LABEL, only show value of cust_svc_rep.version(a common/integer)
+
+=====web console detail page for b2b/contract_price=====
+  I want a LABEL, only show value of contract_price.id(a common/string)
+  I want a LABEL, only show value of contract_price.contract_id(a common/string)
+  I want a LINK, which can jump to detail page of contract_price.sku(a b2b/sku)
+  I want a LABEL, only show value of contract_price.price(a common/integer)
+  I want a block of content, which show detail of contract_price.review(a b2b/contract_price_review)
+  I want a block of content, which show detail of contract_price.approval(a b2b/contract_price_approval)
+  I want a LABEL, only show value of contract_price.version(a common/integer)
+  I want a ACTION (show up if it's valid), to execute  CONTRACT_PRICE_REVIEW(TODO: how to get the verb word?)
+  I want a ACTION (show up if it's valid), to execute  CONTRACT_PRICE_APPROVAL(TODO: how to get the verb word?)
+
+=====web console detail page for b2b/marketing_banner=====
+  I want a LABEL, only show value of marketing_banner.id(a common/string)
+  I want a LINK, which can jump to detail page of marketing_banner.parent(a b2b/marketing_landing)
+  I want a LABEL, only show value of marketing_banner.image(a common/image)
+  I want a LABEL, only show value of marketing_banner.link(a common/string)
+  I want a LABEL, only show value of marketing_banner.version(a common/integer)
+
+=====web console detail page for b2b/contract_price_approval=====
+  I want a LABEL, only show value of contract_price_approval.id(a common/string)
+  I want a LABEL, only show value of contract_price_approval.who(a common/string)
+  I want a LABEL, only show value of contract_price_approval.approve_time(a common/date)
+  I want a LABEL, only show value of contract_price_approval.remark(a common/string)
+  I want a LABEL, only show value of contract_price_approval.version(a common/integer)
+  I want a LINK, which can jump to detail page of contract_price_approval.ContractPriceList(a b2b/contract_price)
+
+=====web console detail page for b2b/access=====
+  I want a LABEL, only show value of access.id(a common/string)
+  I want a LABEL, only show value of access.role_name(a common/string)
+  I want a LINK, which can jump to detail page of access.role(a b2b/role)
+  I want a LABEL, only show value of access.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of access.AssignmentList(a b2b/assignment)
+
+=====web console detail page for b2b/shipping_address=====
+  I want a LABEL, only show value of shipping_address.id(a common/string)
+  I want a LABEL, only show value of shipping_address.line1(a common/string)
+  I want a LABEL, only show value of shipping_address.line2(a common/string)
+  I want a LABEL, only show value of shipping_address.city(a common/string)
+  I want a LABEL, only show value of shipping_address.state(a common/string)
+  I want a LABEL, only show value of shipping_address.country(a common/string)
+  I want a LABEL, only show value of shipping_address.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of shipping_address.ShippingGroupList(a b2b/shipping_group)
+
+=====web console detail page for b2b/recurring_info=====
+  I want a LABEL, only show value of recurring_info.id(a common/string)
+  I want a LABEL, only show value of recurring_info.name(a common/string)
+  I want a LABEL, only show value of recurring_info.next_time(a common/date)
+  I want a LABEL, only show value of recurring_info.cron_expr(a common/string)
+  I want a LABEL, only show value of recurring_info.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of recurring_info.OrderList(a b2b/order)
+
+=====web console detail page for b2b/order=====
+  I want a LABEL, only show value of order.id(a common/string)
+  I want a LINK, which can jump to detail page of order.buyer(a b2b/buyer_company)
+  I want a LINK, which can jump to detail page of order.seller(a b2b/seller_company)
+  I want a LABEL, only show value of order.title(a common/string)
+  I want a LINK, which can jump to detail page of order.cost_center(a b2b/cost_center)
+  I want a LINK, which can jump to detail page of order.profit_center(a b2b/profit_center)
+  I want a LABEL, only show value of order.total_amount(a common/money)
+  I want a LABEL, only show value of order.type(a common/string)
+  I want a LABEL, only show value of order.mark_as_delete(a common/boolean)
+  I want a block of content, which show detail of order.confirmation(a b2b/confirmation)
+  I want a block of content, which show detail of order.approval(a b2b/approval)
+  I want a block of content, which show detail of order.processing(a b2b/processing)
+  I want a block of content, which show detail of order.shipment(a b2b/shipment)
+  I want a block of content, which show detail of order.delivery(a b2b/delivery)
+  I want a LINK, which can jump to detail page of order.recurring_info(a b2b/recurring_info)
+  I want a LABEL, only show value of order.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of order.LineItemList(a b2b/line_item)
+  I want a PAGER of LINK, each can jump to detail page of order.ShippingGroupList(a b2b/shipping_group)
+  I want a PAGER of LINK, each can jump to detail page of order.PaymentGroupList(a b2b/payment_group)
+  I want a PAGER of LINK, each can jump to detail page of order.ActionList(a b2b/action)
+  I want a ACTION (show up if it's valid), to execute  CONFIRMATION(TODO: how to get the verb word?)
+  I want a ACTION (show up if it's valid), to execute  APPROVAL(TODO: how to get the verb word?)
+  I want a ACTION (show up if it's valid), to execute  PROCESSING(TODO: how to get the verb word?)
+  I want a ACTION (show up if it's valid), to execute  SHIPMENT(TODO: how to get the verb word?)
+  I want a ACTION (show up if it's valid), to execute  DELIVERY(TODO: how to get the verb word?)
+
+=====web console detail page for b2b/cost_center=====
+  I want a LABEL, only show value of cost_center.id(a common/string)
+  I want a LABEL, only show value of cost_center.name(a common/string)
+  I want a LINK, which can jump to detail page of cost_center.belongs_to(a b2b/buyer_company)
+  I want a LABEL, only show value of cost_center.password(a common/string)
+  I want a LABEL, only show value of cost_center.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of cost_center.OrderList(a b2b/order)
+
+=====web console detail page for b2b/shipping_group=====
+  I want a LABEL, only show value of shipping_group.id(a common/string)
+  I want a LABEL, only show value of shipping_group.name(a common/string)
+  I want a LINK, which can jump to detail page of shipping_group.biz_order(a b2b/order)
+  I want a LINK, which can jump to detail page of shipping_group.address(a b2b/shipping_address)
+  I want a LABEL, only show value of shipping_group.amount(a common/money)
+  I want a LABEL, only show value of shipping_group.version(a common/integer)
+
+=====web console detail page for b2b/profit_center=====
+  I want a LABEL, only show value of profit_center.id(a common/string)
+  I want a LABEL, only show value of profit_center.name(a common/string)
+  I want a LINK, which can jump to detail page of profit_center.belongs_to(a b2b/seller_company)
+  I want a LABEL, only show value of profit_center.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of profit_center.OrderList(a b2b/order)
+
+=====web console detail page for b2b/level_five_cat=====
+  I want a LABEL, only show value of level_five_cat.id(a common/string)
+  I want a LINK, which can jump to detail page of level_five_cat.parent_cat(a b2b/level_four_cat)
+  I want a LABEL, only show value of level_five_cat.display_name(a common/string)
+  I want a LABEL, only show value of level_five_cat.version(a common/integer)
+
+=====web console detail page for b2b/marketing_landing=====
+  I want a LABEL, only show value of marketing_landing.id(a common/string)
+  I want a LABEL, only show value of marketing_landing.title(a common/string)
+  I want a LABEL, only show value of marketing_landing.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of marketing_landing.SellerSiteList(a b2b/seller_site)
+  I want a PAGER of LINK, each can jump to detail page of marketing_landing.MarketingBannerList(a b2b/marketing_banner)
+
+=====web console detail page for b2b/universal_price=====
+  I want a LABEL, only show value of universal_price.id(a common/string)
+  I want a LINK, which can jump to detail page of universal_price.sku(a b2b/sku)
+  I want a LABEL, only show value of universal_price.price(a common/integer)
+  I want a LABEL, only show value of universal_price.version(a common/integer)
+
+=====web console detail page for b2b/billing_address=====
+  I want a LABEL, only show value of billing_address.id(a common/string)
+  I want a LINK, which can jump to detail page of billing_address.company(a b2b/buyer_company)
+  I want a LABEL, only show value of billing_address.line1(a common/string)
+  I want a LABEL, only show value of billing_address.line2(a common/string)
+  I want a LABEL, only show value of billing_address.city(a common/string)
+  I want a LABEL, only show value of billing_address.state(a common/string)
+  I want a LABEL, only show value of billing_address.country(a common/string)
+  I want a LABEL, only show value of billing_address.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of billing_address.PaymentGroupList(a b2b/payment_group)
+
+=====web console detail page for b2b/home_page=====
+  I want a LABEL, only show value of home_page.id(a common/string)
+  I want a LABEL, only show value of home_page.title(a common/string)
+  I want a LABEL, only show value of home_page.ver(a common/string)
+  I want a LABEL, only show value of home_page.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of home_page.SellerSiteList(a b2b/seller_site)
+  I want a PAGER of LINK, each can jump to detail page of home_page.HeaderList(a b2b/header)
+  I want a PAGER of LINK, each can jump to detail page of home_page.NaviList(a b2b/navi)
+  I want a PAGER of LINK, each can jump to detail page of home_page.BannerList(a b2b/banner)
+  I want a PAGER of LINK, each can jump to detail page of home_page.FooterList(a b2b/footer)
+
+=====web console detail page for b2b/employee=====
+  I want a LABEL, only show value of employee.id(a common/string)
+  I want a LABEL, only show value of employee.name(a common/string)
+  I want a LINK, which can jump to detail page of employee.company(a b2b/buyer_company)
+  I want a LABEL, only show value of employee.email(a common/email)
+  I want a LABEL, only show value of employee.passwd(a common/string)
+  I want a LABEL, only show value of employee.cell_phone(a common/phoneNumber)
+  I want a LABEL, only show value of employee.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of employee.AssignmentList(a b2b/assignment)
+
+=====web console detail page for b2b/processing=====
+  I want a LABEL, only show value of processing.id(a common/string)
+  I want a LABEL, only show value of processing.who(a common/string)
+  I want a LABEL, only show value of processing.process_time(a common/date)
+  I want a LABEL, only show value of processing.version(a common/integer)
+  I want a LINK, which can jump to detail page of processing.OrderList(a b2b/order)
+
+=====web console detail page for b2b/warehouse=====
+  I want a LABEL, only show value of warehouse.id(a common/string)
+  I want a LABEL, only show value of warehouse.display_name(a common/string)
+  I want a LABEL, only show value of warehouse.location(a common/string)
+  I want a LABEL, only show value of warehouse.owner(a common/email)
+  I want a LABEL, only show value of warehouse.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of warehouse.InventoryList(a b2b/inventory)
+
+=====web console detail page for b2b/level_three_cat=====
+  I want a LABEL, only show value of level_three_cat.id(a common/string)
+  I want a LINK, which can jump to detail page of level_three_cat.parent_cat(a b2b/level_two_cat)
+  I want a LABEL, only show value of level_three_cat.display_name(a common/string)
+  I want a LABEL, only show value of level_three_cat.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of level_three_cat.LevelFourCatList(a b2b/level_four_cat)
+  I want a PAGER of LINK, each can jump to detail page of level_three_cat.LevelNCatList(a b2b/level_n_cat)
+
+=====web console detail page for b2b/credit_account=====
+  I want a LABEL, only show value of credit_account.id(a common/string)
+  I want a LABEL, only show value of credit_account.name(a common/string)
+  I want a LINK, which can jump to detail page of credit_account.buyer(a b2b/buyer_company)
+  I want a LINK, which can jump to detail page of credit_account.seller(a b2b/seller_company)
+  I want a LABEL, only show value of credit_account.authorized(a common/float)
+  I want a LABEL, only show value of credit_account.remain(a common/float)
+  I want a LABEL, only show value of credit_account.version(a common/integer)
+
+=====web console detail page for b2b/brand=====
+  I want a LABEL, only show value of brand.id(a common/string)
+  I want a LABEL, only show value of brand.brand_name(a common/string)
+  I want a LABEL, only show value of brand.logo(a common/image)
+  I want a LABEL, only show value of brand.remark(a common/string)
+  I want a LABEL, only show value of brand.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of brand.ProductList(a b2b/product)
+
+=====web console detail page for b2b/banner=====
+  I want a LABEL, only show value of banner.id(a common/string)
+  I want a LINK, which can jump to detail page of banner.page(a b2b/home_page)
+  I want a LABEL, only show value of banner.image(a common/image)
+  I want a LABEL, only show value of banner.action(a common/string)
+  I want a LABEL, only show value of banner.version(a common/integer)
+
+=====web console detail page for b2b/level_two_cat=====
+  I want a LABEL, only show value of level_two_cat.id(a common/string)
+  I want a LINK, which can jump to detail page of level_two_cat.parent_cat(a b2b/level_one_cat)
+  I want a LABEL, only show value of level_two_cat.display_name(a common/string)
+  I want a LABEL, only show value of level_two_cat.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of level_two_cat.LevelThreeCatList(a b2b/level_three_cat)
+
+=====web console detail page for b2b/header=====
+  I want a LABEL, only show value of header.id(a common/string)
+  I want a LINK, which can jump to detail page of header.page(a b2b/home_page)
+  I want a LABEL, only show value of header.image(a common/image)
+  I want a LABEL, only show value of header.action(a common/string)
+  I want a LABEL, only show value of header.version(a common/integer)
+
+=====web console detail page for b2b/inventory=====
+  I want a LABEL, only show value of inventory.id(a common/string)
+  I want a LINK, which can jump to detail page of inventory.sku(a b2b/sku)
+  I want a LINK, which can jump to detail page of inventory.warehouse(a b2b/warehouse)
+  I want a LABEL, only show value of inventory.stock_level(a common/integer)
+  I want a LABEL, only show value of inventory.preorderable(a common/integer)
+  I want a LABEL, only show value of inventory.backorderable(a common/integer)
+  I want a LABEL, only show value of inventory.version(a common/integer)
+
+=====web console detail page for b2b/shipment=====
+  I want a LABEL, only show value of shipment.id(a common/string)
+  I want a LABEL, only show value of shipment.who(a common/string)
+  I want a LABEL, only show value of shipment.ship_time(a common/date)
+  I want a LABEL, only show value of shipment.version(a common/integer)
+  I want a LINK, which can jump to detail page of shipment.OrderList(a b2b/order)
+
+=====web console detail page for b2b/delivery=====
+  I want a LABEL, only show value of delivery.id(a common/string)
+  I want a LABEL, only show value of delivery.who(a common/string)
+  I want a LABEL, only show value of delivery.delivery_time(a common/date)
+  I want a LABEL, only show value of delivery.version(a common/integer)
+  I want a LINK, which can jump to detail page of delivery.OrderList(a b2b/order)
+
+=====web console detail page for b2b/buyer_company=====
+  I want a LABEL, only show value of buyer_company.id(a common/string)
+  I want a LABEL, only show value of buyer_company.name(a common/string)
+  I want a LABEL, only show value of buyer_company.price_list(a common/string)
+  I want a LABEL, only show value of buyer_company.rating(a common/integer)
+  I want a LABEL, only show value of buyer_company.logo(a common/image)
+  I want a LABEL, only show value of buyer_company.owner(a common/email)
+  I want a LABEL, only show value of buyer_company.founded(a common/date)
+  I want a LABEL, only show value of buyer_company.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of buyer_company.CostCenterList(a b2b/cost_center)
+  I want a PAGER of LINK, each can jump to detail page of buyer_company.CreditAccountList(a b2b/credit_account)
+  I want a PAGER of LINK, each can jump to detail page of buyer_company.BillingAddressList(a b2b/billing_address)
+  I want a PAGER of LINK, each can jump to detail page of buyer_company.EmployeeList(a b2b/employee)
+  I want a PAGER of LINK, each can jump to detail page of buyer_company.OrderList(a b2b/order)
+
+=====web console detail page for b2b/contract_price_review=====
+  I want a LABEL, only show value of contract_price_review.id(a common/string)
+  I want a LABEL, only show value of contract_price_review.who(a common/string)
+  I want a LABEL, only show value of contract_price_review.review_time(a common/date)
+  I want a LABEL, only show value of contract_price_review.remark(a common/string)
+  I want a LABEL, only show value of contract_price_review.version(a common/integer)
+  I want a LINK, which can jump to detail page of contract_price_review.ContractPriceList(a b2b/contract_price)
+
+=====web console detail page for b2b/confirmation=====
+  I want a LABEL, only show value of confirmation.id(a common/string)
+  I want a LABEL, only show value of confirmation.who(a common/string)
+  I want a LABEL, only show value of confirmation.confirm_time(a common/date)
+  I want a LABEL, only show value of confirmation.version(a common/integer)
+  I want a LINK, which can jump to detail page of confirmation.OrderList(a b2b/order)
+
+=====web console detail page for b2b/level_one_cat=====
+  I want a LABEL, only show value of level_one_cat.id(a common/string)
+  I want a LINK, which can jump to detail page of level_one_cat.catalog(a b2b/catalog)
+  I want a LABEL, only show value of level_one_cat.display_name(a common/string)
+  I want a LABEL, only show value of level_one_cat.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of level_one_cat.LevelTwoCatList(a b2b/level_two_cat)
+
+=====web console detail page for b2b/payment_group=====
+  I want a LABEL, only show value of payment_group.id(a common/string)
+  I want a LABEL, only show value of payment_group.name(a common/string)
+  I want a LINK, which can jump to detail page of payment_group.biz_order(a b2b/order)
+  I want a LABEL, only show value of payment_group.card_number(a common/string)
+  I want a LINK, which can jump to detail page of payment_group.billing_address(a b2b/billing_address)
+  I want a LABEL, only show value of payment_group.version(a common/integer)
+
+=====web console detail page for b2b/fix_rice_sku_promotion=====
+  I want a LABEL, only show value of fix_rice_sku_promotion.id(a common/string)
+  I want a LINK, which can jump to detail page of fix_rice_sku_promotion.sku(a b2b/sku)
+  I want a LABEL, only show value of fix_rice_sku_promotion.rules(a common/string)
+  I want a LABEL, only show value of fix_rice_sku_promotion.price_to(a common/float)
+  I want a LABEL, only show value of fix_rice_sku_promotion.version(a common/integer)
+
+=====web console detail page for b2b/footer=====
+  I want a LABEL, only show value of footer.id(a common/string)
+  I want a LINK, which can jump to detail page of footer.page(a b2b/home_page)
+  I want a LABEL, only show value of footer.image(a common/image)
+  I want a LABEL, only show value of footer.action(a common/string)
+  I want a LABEL, only show value of footer.version(a common/integer)
+
+=====web console detail page for b2b/approval=====
+  I want a LABEL, only show value of approval.id(a common/string)
+  I want a LABEL, only show value of approval.who(a common/string)
+  I want a LABEL, only show value of approval.approve_time(a common/date)
+  I want a LABEL, only show value of approval.version(a common/integer)
+  I want a LINK, which can jump to detail page of approval.OrderList(a b2b/order)
+
+=====web console detail page for b2b/seller_site=====
+  I want a LABEL, only show value of seller_site.id(a common/string)
+  I want a LABEL, only show value of seller_site.site_id(a common/string)
+  I want a LINK, which can jump to detail page of seller_site.home_page(a b2b/home_page)
+  I want a LINK, which can jump to detail page of seller_site.catalog(a b2b/catalog)
+  I want a LINK, which can jump to detail page of seller_site.marketing(a b2b/marketing_landing)
+  I want a LABEL, only show value of seller_site.version(a common/integer)
+
+=====web console detail page for b2b/level_four_cat=====
+  I want a LABEL, only show value of level_four_cat.id(a common/string)
+  I want a LINK, which can jump to detail page of level_four_cat.parent_cat(a b2b/level_three_cat)
+  I want a LABEL, only show value of level_four_cat.display_name(a common/string)
+  I want a LABEL, only show value of level_four_cat.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of level_four_cat.LevelFiveCatList(a b2b/level_five_cat)
+
+=====web console detail page for b2b/seller_company=====
+  I want a LABEL, only show value of seller_company.id(a common/string)
+  I want a LABEL, only show value of seller_company.name(a common/string)
+  I want a LABEL, only show value of seller_company.owner(a common/email)
+  I want a LABEL, only show value of seller_company.logo(a common/image)
+  I want a LABEL, only show value of seller_company.contract_text(a common/document)
+  I want a LABEL, only show value of seller_company.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of seller_company.ProfitCenterList(a b2b/profit_center)
+  I want a PAGER of LINK, each can jump to detail page of seller_company.CreditAccountList(a b2b/credit_account)
+  I want a PAGER of LINK, each can jump to detail page of seller_company.OrderList(a b2b/order)
+  I want a PAGER of LINK, each can jump to detail page of seller_company.CustSvcRepList(a b2b/cust_svc_rep)
+
+=====web console detail page for b2b/catalog=====
+  I want a LABEL, only show value of catalog.id(a common/string)
+  I want a LABEL, only show value of catalog.display_name(a common/string)
+  I want a LABEL, only show value of catalog.seller_id(a common/string)
+  I want a LABEL, only show value of catalog.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of catalog.SellerSiteList(a b2b/seller_site)
+  I want a PAGER of LINK, each can jump to detail page of catalog.LevelOneCatList(a b2b/level_one_cat)
+
+=====web console detail page for b2b/sku=====
+  I want a LABEL, only show value of sku.id(a common/string)
+  I want a LABEL, only show value of sku.display_name(a common/string)
+  I want a LABEL, only show value of sku.size(a common/string)
+  I want a LINK, which can jump to detail page of sku.product(a b2b/product)
+  I want a LABEL, only show value of sku.active(a common/boolean)
+  I want a LABEL, only show value of sku.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of sku.UniversalPriceList(a b2b/universal_price)
+  I want a PAGER of LINK, each can jump to detail page of sku.ContractPriceList(a b2b/contract_price)
+  I want a PAGER of LINK, each can jump to detail page of sku.FixRiceSkuPromotionList(a b2b/fix_rice_sku_promotion)
+  I want a PAGER of LINK, each can jump to detail page of sku.InventoryList(a b2b/inventory)
+
+=====web console detail page for b2b/product=====
+  I want a LABEL, only show value of product.id(a common/string)
+  I want a LABEL, only show value of product.display_name(a common/string)
+  I want a LINK, which can jump to detail page of product.parent_cat(a b2b/level_n_cat)
+  I want a LINK, which can jump to detail page of product.brand(a b2b/brand)
+  I want a LABEL, only show value of product.origin(a common/string)
+  I want a LABEL, only show value of product.remark(a common/string)
+  I want a LABEL, only show value of product.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of product.SkuList(a b2b/sku)
+
+=====web console detail page for b2b/universal_price_review=====
+  I want a LABEL, only show value of universal_price_review.id(a common/string)
+  I want a LABEL, only show value of universal_price_review.who(a common/string)
+  I want a LABEL, only show value of universal_price_review.review_time(a common/date)
+  I want a LABEL, only show value of universal_price_review.remark(a common/string)
+  I want a LABEL, only show value of universal_price_review.version(a common/integer)
+
+=====web console detail page for b2b/navi=====
+  I want a LABEL, only show value of navi.id(a common/string)
+  I want a LINK, which can jump to detail page of navi.page(a b2b/home_page)
+  I want a LABEL, only show value of navi.image(a common/string)
+  I want a LABEL, only show value of navi.action(a common/string)
+  I want a LABEL, only show value of navi.version(a common/integer)
+
+=====web console detail page for b2b/role=====
+  I want a LABEL, only show value of role.id(a common/string)
+  I want a LABEL, only show value of role.role_name(a common/string)
+  I want a LABEL, only show value of role.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of role.AccessList(a b2b/access)
+  I want a PAGER of LINK, each can jump to detail page of role.CustSvcRepList(a b2b/cust_svc_rep)
+
+=====web console detail page for b2b/universal_price_approval=====
+  I want a LABEL, only show value of universal_price_approval.id(a common/string)
+  I want a LABEL, only show value of universal_price_approval.who(a common/string)
+  I want a LABEL, only show value of universal_price_approval.approve_time(a common/date)
+  I want a LABEL, only show value of universal_price_approval.remark(a common/string)
+  I want a LABEL, only show value of universal_price_approval.version(a common/integer)
+
+=====web console detail page for b2b/action=====
+  I want a LABEL, only show value of action.id(a common/string)
+  I want a LABEL, only show value of action.name(a common/string)
+  I want a LABEL, only show value of action.internal_name(a common/string)
+  I want a LINK, which can jump to detail page of action.bo(a b2b/order)
+  I want a LABEL, only show value of action.version(a common/integer)
+
+=====web console detail page for b2b/level_n_cat=====
+  I want a LABEL, only show value of level_n_cat.id(a common/string)
+  I want a LINK, which can jump to detail page of level_n_cat.parent_cat(a b2b/level_three_cat)
+  I want a LABEL, only show value of level_n_cat.display_name(a common/string)
+  I want a LABEL, only show value of level_n_cat.version(a common/integer)
+  I want a PAGER of LINK, each can jump to detail page of level_n_cat.ProductList(a b2b/product)
+
